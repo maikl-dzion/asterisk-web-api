@@ -1,0 +1,92 @@
+<div>
+
+    <modal-jquery-com
+            :title="getFormTitleFormatted"
+            :width="widthModalForm"
+            :modal_id="modalId" >
+
+        <template slot="form-body">
+
+            <!--<pre style="display: block; color:black; " >{{getItemModel}}</pre>-->
+
+            <div class="row">
+
+               <template v-if="action == 'add'">
+
+                   <template v-for="(value, fieldName) in getItemModel" >
+                       <!-- <pre>{{fieldName}} - {{value}}</pre> -->
+                       <div v-if="fieldName == 'extension'" class="col-xs-4 form-group" >
+                           <label>Номер</label>
+                           <input @input="checkNewExtension(fieldName)" v-model="item[fieldName]" type="text" class="form-control" placeholder="Номер" >
+                       </div>
+
+                       <div v-else-if="fieldName == 'name'" class="col-xs-4 form-group">
+                           <label>Имя пользователя</label>
+                           <input v-model="item[fieldName]" type="text" class="form-control" placeholder="Имя">
+                       </div>
+
+                       <!--<div v-else-if="fieldName == 'devinfo_secret'" class="col-xs-4 form-group">-->
+                           <!--<label>Пароль</label>-->
+                           <!--<input v-model="item[fieldName]" type="text" class="form-control" placeholder="Пароль">-->
+                       <!--</div>-->
+
+                   </template>
+
+               </template>
+               <template v-else-if="action == 'edit'" >
+
+                    <template v-for="(value, fieldName) in getItemModel" >
+                        <!-- <pre>{{fieldName}} - {{value}}</pre> -->
+                        <div v-if="fieldName == 'extension'" class="col-xs-4 form-group" >
+                            <label>Номер</label>
+                            <input v-model="item[fieldName]" type="text" class="form-control" placeholder="Номер" disabled="true" >
+                        </div>
+
+                        <div v-else-if="fieldName == 'name'" class="col-xs-8 form-group">
+                            <label>Имя пользователя</label>
+                            <input v-model="item[fieldName]" type="text" class="form-control" placeholder="Имя">
+                        </div>
+
+                        <div v-else-if="fieldName == 'devinfo_context'" class="col-xs-4 form-group">
+                            <label>CustomContext</label>
+                            <input v-model="item[fieldName]" type="text" class="form-control" placeholder="CustomContext" disabled="true">
+                        </div>
+
+                        <div v-else-if="fieldName == 'devinfo_secret'" class="col-xs-8 form-group">
+                            <label>Пароль</label>
+                            <input v-model="item[fieldName]" type="text" class="form-control" placeholder="Пароль">
+                        </div>
+
+                    </template>
+
+                    <div  class="col-xs-8 form-group">
+                        <label>Переадресация (№ телефона куда переадресовать)</label>
+                        <input v-model="getFollowMeEdit.tel" type="text" class="form-control">
+                    </div>
+
+                    <div  class="col-xs-4 form-group">
+                        <label>Timeout</label>
+                        <div class="input-group">
+                            <input v-model="getFollowMeEdit.time" type="text" class="form-control">
+                            <div class="input-group-btn">
+                                <button @click="followMeSave()" type="button" class="btn btn-info">Сохранить переадресацию</button>
+                            </div>
+                        </div>
+                    </div>
+
+               </template>
+
+            </div>
+
+            <!--<pre style="display: block; color:black; " >{{getItemModel}}</pre>-->
+
+        </template>
+
+        <template slot="form-footer" >
+            <button  type="button"   class="btn btn-outline pull-left" data-dismiss="modal">Отмена</button>
+            <button  @click="save('user')" type="button" class="btn btn-outline" data-dismiss="modal" >Сохранить</button>
+        </template>
+
+    </modal-jquery-com>
+
+</div><!-- TEMPLATE -->

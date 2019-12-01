@@ -1,0 +1,242 @@
+<div>
+
+    <loading-popup
+        :display  ="loadingPopUpDisplay"
+        :modal_id ="loadingPopUpModalId"
+        :title    ="loadingPopUpTitle" >
+        <div slot="loading-bottom-content" style="color: white; background: black;padding: 10px;"
+             v-html="loadingPopUpMessage" >
+        </div>
+    </loading-popup>
+
+    <file-loader-controller
+        v-if="fileLoaderState"
+        :id="fileItemId"
+        :action="fileAction"
+        :data="fileParams"
+        params="{}"
+    ></file-loader-controller>
+
+    <!--<section >-->
+        <!--<header-page-panel-->
+          <!--:page_title="pageTitle"-->
+          <!--:small_title="smallTitle"-->
+        <!--&gt;</header-page-panel>-->
+    <!--</section>-->
+
+    <section id="content-main-id" class="content-main"  >
+
+        <template  >
+            <v-toolbar style="margin-top:12px;"
+                       color="primary" dark >
+
+                <v-toolbar-items class="hidden-sm-and-down">
+                    <v-btn v-for="(row, i) in  dragContainerNames" flat :key="row.name"
+                           :id="'control-button-' + row.name"
+                           class="items-button-toggle"
+                           @click="dragContainerToggle(row.name)" >{{row.title}}</v-btn>
+                </v-toolbar-items>
+
+                <v-spacer></v-spacer>
+
+                <!--{{actionType}}-->
+                <!--<v-spacer></v-spacer>-->
+
+                <!--<v-btn-toggle style="margin-right:10px;" >-->
+
+                    <!--<v-btn @click="setActionType('inline')" flat value="inline">-->
+                        <!--Входящая линия-->
+                    <!--</v-btn>-->
+                    <!--<v-btn @click="setActionType('outline')" flat value="outline">-->
+                        <!--Исходящая линия-->
+                    <!--</v-btn>-->
+
+                <!--</v-btn-toggle>-->
+
+                <!--<v-btn class="v-btn theme--dark info" @click="addOutRouteLine({ id : 5, type : 'trunk'})" color="info"  >Test</v-btn>-->
+                <!--<v-btn class="v-btn theme&#45;&#45;dark info" @click="_toggleDisplay('v-input__slot', '.')" color="info"  >Test</v-btn>-->
+
+                <v-btn class="v-btn theme--dark info" @click="fileLoaderModalOpen()" color="info" >Загрузить файл</v-btn>
+
+                <v-btn class="v-btn theme--dark info" @click="updateItemsBundle()" color="info"  >Обновить</v-btn>
+
+                <v-btn class="v-btn theme--dark info" @click="clearCanvas()" color="info"  >Очистить конструктор</v-btn>
+                <!--<a :href="siteUrl + '/index.php'" class="v-btn theme&#45;&#45;dark info" color="info"  >Очистить конструктор</a>-->
+                <!--<a @click="setPageName('constructorLinks')"-->
+                   <!--class="v-btn theme&#45;&#45;dark info" color="info"-->
+                   <!--:href="siteUrl + '/index.php?#constructorLinks'"  >Очистить конструктор</a>-->
+
+                <v-btn @click="systemReload()" color="error"  >Применить изменения</v-btn>
+                <!--<v-btn @click="save()" color="success" disabled >Сохранить</v-btn>-->
+
+            </v-toolbar>
+        </template>
+
+        <div id="jtk-demo-main" class="jtk-demo-main" style="width:100%;" >
+
+            <div id="canvas"
+                 class="jtk-demo-canvas canvas-wide statemachine-demo jtk-surface jtk-surface-nopan" >
+                 <div class="dragItemsZone" id="dragItemsZone" >
+
+                     <!-- <pre>{{ringGroups}}</pre> -->
+
+                     <div v-for="(bundle, key) in objectsBundle" :key="key"
+                          :class="bundle.boxClass + ' ' + containerClass"  >
+                         <!----  Init ---->
+
+                         <template>
+                             <v-toolbar dark color="primary" style="margin-bottom: 14px;">
+
+                                 <v-toolbar-title class="white--text">
+                                     <v-text-field
+                                          @input="searchItems(bundle)"
+                                          v-model="searchItemValue"
+                                          label="Поиск ..."></v-text-field>
+                                 </v-toolbar-title>
+
+                                 <v-spacer></v-spacer>
+
+                                 <v-btn icon><v-icon>search</v-icon></v-btn>
+                                 <v-btn icon @click="addItemModal(bundle)" ><v-icon>queue</v-icon></v-btn>
+
+                             </v-toolbar>
+                         </template>
+
+                         <div v-for="(row, i) in bundle.items"
+
+                              :class="bundle.params.iconClass + ' ' + itemClass + ' drag-left-menu-items'"
+                              :id="bundle.params.typeName + '-connect-drag-' + row[bundle.params.uid]"
+                              :data-id="row[bundle.params.uid]"
+                              :data-type="bundle.params.typeName"
+                              data-drag-state="drag"
+                              @click="elementFormattedStart(row, bundle.params)" >
+
+                              <!-- <div :action="bundle.params.typeName + '-' + row[bundle.params.uid]" -->
+                              <!-- <div  class="ep"></div> -->
+
+                              <!--<i class="material-icons" @click="editItemModal(row, bundle.params)"-->
+                                <!--style="position:absolute; color:brown; font-size:20px;-->
+                                       <!--cursor:pointer; border:0px gainsboro solid;-->
+                                       <!--padding:3px; border-radius: 4px; margin: -18px 0 0 112px;"-->
+                              <!--&gt;border_color</i>-->
+
+                              <div :class="infoClass" >
+
+                                     <div >{{bundle.params.title}}</div>
+                                     <div v-if="row[bundle.params.name]" >{{row[bundle.params.name]}}</div>
+                                     <div v-if="row[bundle.params.num]">{{row[bundle.params.num]}}</div>
+
+                              </div>
+
+                              <!-- Кнопка удаления -->
+                              <div @click="_deleteItem(row, bundle.params, 'drag')"
+                                   style="border:1px red solid;margin-top:-20px;"
+                                   >delete</div>
+
+                         </div>
+                         <!----  End  ---->
+                     </div>
+
+                 </div>
+
+                <div class="dragGroupsZone" >
+                    <!--<div v-add-inner-html>56777</div>-->
+                    <!--<div v-html_render="compileMessage"></div>-->
+                </div>
+
+                <div class="dropZoneContainer" id="dropZoneContainer" >
+
+                    <!-- ХОЛСТ ДЛЯ КОНСТРУКТОРА -->
+
+                    <template v-for="(elem, i) in dropElementItems" >
+                        <div :key="elem.id"
+
+                             :class="elem.params.iconClass + ' ' + itemClass"
+                             :id="elem.elem_id"
+                             :data-id="elem.id"
+                             :data-type="elem.type"
+                             data-drag-state="drag"
+                             :style="'left:'+elem.left+'px;top:'+elem.top+'px; position:absolute;'"
+                             @dblclick="editItemModal(elem.item, elem.params)" >
+
+                                <!--<i class="material-icons" @click="editItemModal(elem.item, elem.params)"-->
+                                   <!--style="position: absolute; color: brown; font-size: 20px;-->
+                                          <!--cursor: pointer; border: 0px solid gainsboro;-->
+                                          <!--padding: 3px; border-radius: 4px; margin: -18px 0px 0px 65px;">border_color</i>-->
+
+                                <div :class="infoClass" >
+                                    <div >{{elem.params.title}}</div>
+                                    <div v-if="elem.item[elem.params.name]" >{{elem.item[elem.params.name]}}</div>
+                                    <div v-if="elem.item[elem.params.num]" >{{elem.item[elem.params.num]}}</div>
+                                </div>
+
+                                <!--<div class="userCallForwarding">-->
+                                    <!--<div style="padding-top:6px;float:left;">8902486209</div>-->
+                                    <!--<i class="material-icons" style="color:brown; float:right;">subdirectory_arrow_left</i>-->
+                                    <!--<div style="clear:both"></div>-->
+                                <!--</div>-->
+
+                        </div>
+                    </template>
+
+                </div>
+
+            </div> <!-- / #canvas -->
+        </div> <!-- / .jtk-demo-main -->
+
+    </section>
+
+
+    <!---- ДИНАМИЧЕСКИЙ КОМПОНЕНТ ------>
+    <component
+        v-if="isComponentState"
+        :is="dynamicComponent"
+        @to_update_item="toUpdateItem"
+        :id="itemUid"
+        :action="actionType"
+        :data="item"
+        :params="itemParams"
+    ></component>
+
+    <!--<component-->
+        <!--v-if="createNewElementState"-->
+        <!--:is="createNewElementName"-->
+    <!--&gt;</component>-->
+
+    <!--<modal-jquery-com title="Редактировать" width="70%" modal_id="modal-update-ivr">-->
+
+        <!--<template slot="form-body">-->
+           <!--sdfggggg-->
+        <!--</template>-->
+
+        <!--<template slot="form-footer">-->
+            <!--<button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Отмена</button>-->
+        <!--</template>-->
+
+    <!--</modal-jquery-com>-->
+
+    <!-- start Modal Vuetify Box -->
+    <!--<template ><v-layout row justify-center>-->
+        <!--<v-dialog v-model="dialogVuetify" width="70%" >-->
+            <!--<v-card>-->
+                <!--<v-card-title><span class="headline" v-html="modalTitle" ></span></v-card-title>-->
+
+                <!--<v-card-text>-->
+
+
+                <!--</v-card-text>-->
+
+                <!--<v-card-actions>-->
+                    <!--<v-btn color="green darken-1" flat="flat" @click="dialogVuetify = false">Отмена</v-btn>-->
+                    <!--<v-spacer></v-spacer>-->
+                    <!--<v-btn color="green darken-1" flat="flat" @click="saveData()">Сохранить</v-btn>-->
+                <!--</v-card-actions>-->
+
+            <!--</v-card>-->
+        <!--</v-dialog>-->
+
+    <!--</v-layout></template>-->
+    <!-- end Modal Vuetify Box  -->
+
+
+</div>

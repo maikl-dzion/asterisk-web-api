@@ -1,0 +1,133 @@
+<div>
+
+    <alert-info-com v-if="alertOpenStatus" :type="saveStatus" :message="alertMessage" ></alert-info-com>
+
+    <!-- HEADER CONTENT -->
+    <section class="content-header">
+        <h1>Внутренние номера<small>(extensions)</small></h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-university"></i>Главная</a></li>
+            <li class="active">Внутренние номера</li>
+        </ol>
+    </section>
+
+
+    <!-- MAIN CONTENT -->
+    <section class="content">
+
+        <!-- FORM BOX -->
+        <div class="form-box" style="">
+
+            <button @click="openForm()" style="width:250px" type="button"
+                    class="btn btn-block btn-primary btn-flat"> Добавить новый номер
+            </button>
+
+            <!-- quick email widget -->
+            <div v-if="formOpenState" class="box box-info" style="">
+
+                <div class="box-header" style="border:1px gainsboro solid; box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.09)" >
+                    <i class="fa fa-phone"></i>
+                    <h3 class="box-title" style="font-style: italic; font-size:12px;"> Добавление </h3>
+                    <div class="pull-right box-tools">
+                        <button @click="closeForm()" type="button" class="btn btn-info btn-sm"
+                                data-widget="remove" data-toggle="tooltip" title="Remove"><i class="fa fa-times"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!--<pre>{{item}}</pre>-->
+
+                <div class="box-body">
+                    <form>
+                        <div class="form-group">
+
+                            <div class="col-xs-6">
+                                <label>Номер</label>
+                                <input v-model="item.extension" type="text" class="form-control" id="group" name="extension"
+                                       placeholder="Номер" required="true">
+                            </div>
+
+                            <div class="col-xs-6">
+                                <label>Название</label>
+                                <input v-model="item.name" type="text" class="form-control" id="group" name="username"
+                                       placeholder="Название (пользователь)" required="">
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+
+
+                <div class="box-footer clearfix">
+                    <button @click="addItem()" type="button" class="pull-right btn btn-default">
+                        Сохранить <i class="fa fa-arrow-circle-right"></i></button>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- ./FORM BOX -->
+
+
+        <!-- DATA TABLES -->
+        <div class="box-body scrolldiv" style="border:1px gainsboro solid; box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.09)" >
+
+            <table class="table table-bordered">
+                <tbody id="numbersth">
+
+                    <tr>
+                        <th>Номер &nbsp телефона</th>
+                        <th>ФИО &nbsp сотрудника</th>
+                        <th>Установить новый пароль</th>
+                        <th>Сохранить</th>
+                        <th>Удалить</th>
+                    </tr>
+
+                    <tr >
+                        <td><input  type="text" class="form-control number" placeholder="Поиск по номеру"  ></td>
+                        <td><input  type="text" class="form-control full_name" placeholder="Поиск по сотруднику" ></td>
+
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr v-for="(row, key) in extensionsFiltered" :key="key" :data-id="row.extension" :id="row.extension" >
+
+                        <td>
+                            <input :value="row.extension" type="text" class="form-control number" placeholder="Номер телефона" disabled="" >
+                        </td>
+
+                        <td>
+                            <input v-model="row.name"  type="text" class="form-control full_name" placeholder="ФИО сотрудника" >
+                        </td>
+
+                        <td>
+                            <input v-model="row.secret"  type="text" class="form-control password"  placeholder="Внимание! Пароль не установлен" >
+                        </td>
+
+                        <td>
+                            <button @click="editItem(row)" class="btn btn-block btn-success" style="width:50px" >
+                                <i class="fa fa-fw fa-save"></i>
+                            </button>
+                        </td>
+
+                        <td>
+                            <button  @click="deleteItem(row)" style="width:50px" type="button" class="btn btn-danger" >
+                                <i class="fa fa-fw fa-minus-circle" ></i>
+                            </button>
+                        </td>
+
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ./DATA TABLES -->
+
+
+
+    </section>
+
+</div><!-- TEMPLATE -->

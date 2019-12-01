@@ -1,0 +1,66 @@
+<div>
+
+    <!-- start Modal Box -->
+    <modal-jquery-com
+            :title="getFormTitleFormatted"
+            :width="widthModalForm"
+            :modal_id="modalId" >
+
+        <template slot="form-body">
+
+            <div class="" >
+
+                <!--
+                <pre>{{action}}-{{id}}</pre>
+                <pre>{{params}}</pre>
+                <pre>{{getItemModel}}</pre>
+                -->
+
+                <div class="row">
+
+                    <template v-for="(value, fieldName) in getItemModel" >
+                        <!-- <pre>{{fieldName}} - {{value}}</pre> -->
+                        <div v-if="fieldName == 'name'" class="col-xs-6" >
+                            <label>Название</label>
+                            <input @input="checkNewIvrName(fieldName)" v-model="item[fieldName]" type="text" class="form-control" placeholder="Название">
+                        </div>
+
+                        <div v-else-if="fieldName == 'description'" class="col-xs-6">
+                            <label>Описание</label>
+                            <input v-model="item[fieldName]" type="text" class="form-control" placeholder="Описание">
+                        </div>
+
+                        <div v-else-if="fieldName == 'announcement'" class="col-xs-6">
+                            <div class="form-group">
+                                <label>Выбрать звуковой файл</label>
+                                <select v-model="item[fieldName]" class="form-control" style="cursor:pointer;" >
+                                    <option v-for="(sound, i) in soundRecordList"
+                                            :value="sound.id">{{sound.displayname}}
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </template>
+
+                    <!--<pre>{{getItemModel.entries.ext}}</pre>-->
+                    <!--<div  v-for="(val, i) in getItemModel.entries.ext" class="col-xs-12" style="color: black;">-->
+                        <!--<div>{{val}}&#45;&#45;&#45;&#45;{{getItemModel.entries.goto[i]}}</div>-->
+                    <!--</div>-->
+
+                </div>
+
+
+            </div>
+
+        </template>
+
+        <template slot="form-footer">
+            <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Отмена</button>
+            <button @click="save('ivr')" type="button" class="btn btn-outline" data-dismiss="modal">Сохранить</button>
+        </template>
+
+    </modal-jquery-com>
+    <!-- end Modal Box  -->
+
+</div><!-- TEMPLATE -->

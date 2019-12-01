@@ -1,0 +1,52 @@
+<div>
+
+    <modal-jquery-com
+            :title="getFormTitleFormatted"
+            :width="widthModalForm"
+            :modal_id="modalId" >
+
+        <template slot="form-body">
+
+                <div class="row">
+
+                    <template v-for="(value, fieldName) in getItemModel" >
+
+                        <div v-if="fieldName == 'account'" class="col-xs-4 form-group" >
+                            <!-- <pre>{{fieldName}} - {{value}}</pre> -->
+                            <label>Номер группы</label>
+                            <input v-model="item[fieldName]" type="text" class="form-control" placeholder="Номер группы" disabled="true" >
+                        </div>
+
+                        <div v-if="fieldName == 'description'" class="col-xs-8 form-group">
+                            <label>Название группы</label>
+                            <input v-model="item[fieldName]" type="text" class="form-control" placeholder="Описание">
+                        </div>
+
+                    </template>
+
+                    <!--<pre style="display : block;" >{{getItemModel}}</pre>-->
+
+                    <!--<div  class="col-xs-12" style="color: black;">-->
+                        <!--<div>{{item.grplist}}</div>-->
+                    <!--</div>-->
+
+                </div>
+
+        </template>
+
+       <template slot="form-footer" >
+            <button  type="button"   class="btn btn-outline pull-left" data-dismiss="modal">Отмена</button>
+            <button @click="save('group')" type="button" class="btn btn-outline" data-dismiss="modal" >Сохранить</button>
+
+            <!--<template v-if="action == 'edit'" >-->
+                 <!--<button @click="save('group')" type="button" class="btn btn-outline" data-dismiss="modal" >Сохранить</button>-->
+            <!--</template>-->
+            <!--<template v-if="action == 'add'" >-->
+               <!--<button @click="addToCanvas('group', item)" type="button" class="btn btn-outline" data-dismiss="modal" >Добавить на поле конструктора</button>-->
+            <!--</template>-->
+
+       </template>
+
+    </modal-jquery-com>
+
+</div><!-- TEMPLATE -->

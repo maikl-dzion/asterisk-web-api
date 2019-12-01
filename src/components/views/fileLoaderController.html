@@ -1,0 +1,40 @@
+<div>
+
+    <modal-jquery-com
+            :title="getFormTitleFormatted"
+            :width="widthModalForm"
+            :modal_id="modalId" >
+
+        <template slot="form-body">
+            <div class="row">
+               <template v-if="action == 'add'">
+                   <!-- ДОБАВЛЕНИЕ НОВОГО ФАЙЛА -->
+
+                   <div class="col-xs-6 form-group" >
+                       <label>Выбрать файл</label>
+                       <input @change="setFileData()" type="file" class="form-control" name="ivrfile" id="ivrfile">
+                   </div>
+
+                   <div class="col-xs-6 form-group" >
+                      <label>Название записи</label>
+                      <input v-model="newFileName" type="text" class="form-control" placeholder="Название записи" >
+                   </div>
+
+                   <!--<pre>{{item}}</pre>-->
+
+               </template>
+               <template v-else-if="action == 'edit'" >
+                <!-- РЕДАКТИРОВАНИЕ   -->
+
+               </template>
+            </div>
+        </template>
+
+        <template slot="form-footer" >
+            <button  type="button"   class="btn btn-outline pull-left" data-dismiss="modal">Отмена</button>
+            <button  @click="sendFile()" type="button" class="btn btn-outline" data-dismiss="modal" >Сохранить</button>
+        </template>
+
+    </modal-jquery-com>
+
+</div><!-- TEMPLATE -->

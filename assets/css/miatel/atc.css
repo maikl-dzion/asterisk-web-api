@@ -1,0 +1,440 @@
+#atc-page {
+    /*width: 1400px;*/
+    width: 1600px;
+    margin: 0 auto;
+}
+#atc-page .btn-control .btn:before,
+#atc-page .btn-control .btn:after,
+#atc-page .vertical-tab .btn.orange:before,
+#atc-page.vertical-tab .btn.orange:after {
+    z-index: -1;
+}
+
+#atc-page-control-wrapper {
+    height: 42px;
+    margin: 0 auto;
+}
+#atc-page-control form {
+    display: table;
+    text-align: right;
+    position: relative;
+    top: 5px;
+    right: 5px;
+}
+#atc-page-control .fieldset {
+    display: table-cell;
+}
+#atc-page-control .fieldset .label {
+    min-width: 40px;
+}
+#atc-page-control .fieldset .field {
+    min-width: 150px;
+}
+#atc-page-menu-wrapper {
+    display: inline-block;
+    vertical-align: top;
+    width: 200px !important;
+}
+#atc-page-main-wrapper {
+    display: inline-block;
+    vertical-align: top;
+    /*height: 1000px;*/
+    width: 755px;
+}
+#atc-menu {
+    position: relative;
+    /*top: 12px;*/
+    right: -4px;
+}
+#atc-menu .item {
+    background-color: white;
+    padding-left: 16px;
+    color: #939598;
+    text-decoration: none;
+    border-top: solid 1px #e7e8e9;
+    height: 70px;
+    display: table-cell;
+    vertical-align: middle;
+    width: 200px;
+    box-sizing: border-box;
+    z-index: -5;
+}
+#atc-menu .with-icon .item {
+    padding: 5px 0 5px 10px;
+    cursor: default;
+}
+#atc-menu .item.selected {
+    background-color: #efeff0;
+    color: #ed732d;
+}
+#atc-menu a {
+    text-decoration: none;
+}
+#atc-menu .roll-over-menu {
+    margin: 10px 0 0 0;
+}
+#atc-menu .roll-over-menu.collapsed {
+    height: 0;
+    overflow: hidden;
+}
+#atc-menu .roll-over-menu.expanded {
+
+}
+#atc-menu .roll-over-menu .item.first {
+    border-top: solid 1px transparent;
+    height: 60px;
+    padding-bottom: 8px;
+}
+#atc-menu .btn-control .btn {
+    margin: 0;
+    /*text-align: left;*/
+}
+#atc-menu .btn-control .btn span {
+    padding-left: 20px;
+    position: relative;
+    max-width: 160px;
+}
+#atc-menu .vertical-tab .btn {
+    box-shadow: none;
+}
+#atc-menu .btn.orange span:after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 7px 7px 0;
+    border-color: #ffffff transparent;
+    display: block;
+    width: 0;
+    z-index: 1;
+    bottom: 5px;
+    left: 168px;
+}
+#atc-menu .btn.orange span:before {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 7px 7px 0;
+    border-color: #ed732d transparent;
+    display: block;
+    width: 0;
+    z-index: 2;
+    bottom: 7px;
+    left: 168px;
+}
+
+#atc-menu .btn span:after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 9px 0 9px 9px;
+    border-color: transparent #808285;
+    display: block;
+    width: 0;
+    z-index: 1;
+    bottom: 1px;
+    left: 172px;
+}
+#atc-menu .btn span:before {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 9px 0 9px 9px;
+    border-color:  transparent #f6f6f6;
+    display: block;
+    width: 0;
+    z-index: 2;
+    bottom: 1px;
+    left: 170px;
+}
+#atc-menu .atc-label {
+    display: table-cell;
+    vertical-align: middle;
+    height: 70px;
+    padding: 0 10px 0 10px;
+}
+.atc-icon {
+    width: 70px;
+    height: 70px;
+    display: table-cell;
+    /*background: url(/img/atc-icon-sprite.png) no-repeat;*/
+    cursor: move;
+}
+.atc-icon div {
+    font-family: 'exo_2.0regular';
+    font-size: 10pt;
+    font-style: normal;
+}
+.atc-icon.position-not-valid:after {
+    content: '';
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    right: -12px;
+    top: 48px;
+    border-radius: 14px;
+    background: white url(/img/icon-command-small.png) -88px 0 no-repeat;
+}
+.atc-icon.move-only-box {
+    //z-index: -3 !important;
+}
+.atc-icon.icon-moved-now {
+    position: absolute;
+}
+.atc-icon.icon-moved-at-box .btn {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    right: -12px;
+    top: -6px;
+    cursor: pointer;
+    border-radius: 14px;
+    position: absolute;
+    background: white url(/img/icon-command-small.png) no-repeat;
+}
+.icon-moved-at-box .btn.btn-close:hover {
+    background-position: -113px 0;
+}
+.icon-moved-at-box .btn.btn-close {
+    background-position: -91px 0;
+}
+.atc-icon.icon-moved-at-box .btn-show-detail {
+    background-position: -133px 0;
+    left: -20px;
+    top: 22px;
+}
+.atc-icon.icon-moved-at-box .info-panel {
+    font-family: 'exo_2.0regular';
+    font-size: 10pt;
+    font-style: normal;
+    line-height: 12pt;
+    position: relative;
+    top: -80px;
+    left: 85px;
+    height: 70px;
+    display: table-cell;
+    vertical-align: middle;
+    min-width: 120px;
+}
+.atc-icon.icon-moved-at-box .yes-panel {
+    font-family: Tahoma, Arial;
+    position: absolute;
+    left: -41px;
+    top: 58px;
+    font-size: 9pt;
+    background-color: white;
+    padding: 4px 29px 6px 9px;
+    border: solid 1px #dddddd;
+    border-radius: 30px;
+}
+.atc-icon.icon-moved-at-box .no-panel {
+    font-family: Tahoma, Arial;
+    position: absolute;
+    left: 57px;
+    top: 58px;
+    font-size: 9pt;
+    background-color: white;
+    padding: 4px 9px 6px 29px;
+    border: solid 1px #dddddd;
+    border-radius: 30px;
+}
+.atc-icon.icon-moved-at-box .days-panel {
+    position: absolute;
+    left: -20px;
+    top: -4px;
+    display: table;
+}
+.atc-icon.icon-moved-at-box .days-panel .working-day {
+    height: 6px;
+    width: 10px;
+    display: block;
+    border: solid 1px white;
+    background-color: rgb(0, 128, 0);
+}
+.atc-icon.icon-moved-at-box .days-panel .no-working-day {
+    height: 6px;
+    width: 10px;
+    display: block;
+    border: solid 1px white;
+    background-color: rgb(255, 0, 0);
+}
+.atc-icon.icon-moved-at-box .status-panel {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    left: -9px;
+    top: 3px;
+    cursor: pointer;
+    border-radius: 14px;
+    position: absolute;
+    border: solid 2px white;
+}
+.atc-icon.icon-moved-at-box .control-panel {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    left: -18px;
+    top: 23px;
+    cursor: pointer;
+    border-radius: 14px;
+    position: absolute;
+}
+.atc-icon.icon-moved-at-box .btn-phone-reserved-mode {
+    right: -12px;
+    top: 48px;
+    background-position: -224px;
+    text-align: center;
+    line-height: 22px;
+    font-size: 9pt;
+}
+.atc-icon.icon-moved-at-box .status-panel.online {
+    background: white url(/img/control-panel-status-sprite.png) 0 0 no-repeat;
+}
+.atc-icon.icon-moved-at-box .status-panel.offline {
+    background: white url(/img/control-panel-status-sprite.png) -18px 0px no-repeat;
+}
+.atc-icon.icon-moved-at-box .control-panel.play {
+    background: white url(/img/icon-command-small.png) -135px 0px no-repeat;
+}
+.atc-icon.icon-moved-at-box .control-panel.stop {
+    background: white url(/img/icon-command-small.png) -3px 0px no-repeat;
+}
+.atc-icon.icon-moved-at-box .control-panel.play:hover {
+    background-position: -157px 0px;
+}
+.atc-icon.icon-moved-at-box .control-panel.stop:hover {
+    background: white url(/img/icon-command-small.png) -25px 0px no-repeat;
+}
+#atc-main .connection-close-btn {
+    width: 22px;
+    height: 22px;
+    background: white url(/img/icon-command-small.png) -91px 0 no-repeat;
+    border-radius: 12px;
+    cursor: pointer;
+}
+#atc-main .connection-close-btn:hover {
+    background-position: -113px 0;
+}
+#atc-main .endpoint-label {
+    color: white;
+    z-index: 9;
+    /*font-size: 10pt;    */
+}
+#atc-main .hide-digit-now {
+    z-index: 10;
+    opacity: 1;
+}
+.atc-icon.icon-inner-user {
+    background-position: -490px 0;
+}
+.atc-icon.icon-inner-group-user {
+    background-position: -420px 0;
+}
+.atc-icon.icon-voice-menu {
+    background-position: -350px 0;
+}
+.atc-icon.icon-anonce {
+    background-position: 0 0;
+}
+.atc-icon.icon-work-shedule {
+    background-position: -560px 0;
+}
+.atc-icon.icon-calls-filter {
+    background-position: -280px 0;
+}
+.atc-icon.icon-remote-access {
+    background-position: -210px 0;
+}
+.atc-icon.icon-input-call {
+    background-position: -140px 0;
+}
+.atc-icon.icon-input-callback {
+    background-position: -69px 0;
+}
+.atc-icon.icon-offline.icon-input-call {
+/*    background: url(/img/atc-icon-sprite-bw.png) no-repeat;
+    background-position: -140px 0;*/
+}
+.atc-icon.icon-offline.icon-inner-user {
+    background: url(/img/atc-icon-sprite-bw.png) no-repeat;
+    background-position: -490px 0;
+}
+.atc-icon.icon-input-call-sip {
+    background-position: -700px 0;
+}
+.atc-icon.icon-sms-informer {
+    background-position: -770px 0;
+}
+.atc-icon.icon-external-atc {
+    background-position: -630px 0;
+}
+#atc-main {
+    background-color: #f7f7f7;
+    width: 1400px;
+    height: 2200px;
+    /*overflow: auto;*/
+    position: relative;
+}
+#atc-main-inner {
+    width: 2500px;
+    height: 2500px;
+    /*position: relative;*/
+}
+
+#dialog-form .row {
+    margin-bottom: 6px;
+}
+
+#dialog-form .row.keys .notify-message {
+  margin-top: 25px;
+  text-align: center;
+}
+
+#btn-to-genKey {
+  margin: 1px 0 0;
+  padding: 0 6px;
+}
+
+#btn-to-genKey:hover {
+  background-color: #ed732d;
+  color: white;
+}
+
+.api-mode label.apiStatus {
+  margin-left: 3px;
+  color: #808285;
+}
+.anonce-popup-hr {
+    margin: 30px 0 0px 0 !important;
+}
+#anonce-hr-or {
+    display: inline-block;
+    padding: 0 8px;
+    background-color: white;
+    text-align: center;
+    position: relative;
+    top: -11px;
+    left: 156px
+}
+#granted-user-list {
+    max-height: 200px;
+    overflow: auto;
+}
+#atc-page.c-2563 {
+    width: 1900px;
+}
+#atc-main.c-2563 {
+    width: 1690px;
+}
+#atc-page.c-812 {
+    width: 1900px;
+}
+#atc-main.c-812 {
+    width: 1690px;
+    height: 2000px;
+}
+.not-checked .field {
+    opacity: 0.5;
+}
+#widgetPanelV textarea {
+    height: auto;
+}

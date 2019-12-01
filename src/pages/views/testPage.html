@@ -1,0 +1,67 @@
+<div>
+    <h1>Тестовая страница</h1>
+    <section id="content-test-page" class="content-main"  >
+
+        <!--<pre v-html="cdrReports" ></pre>-->
+        <!--<pre v-html="commandInfo" ></pre>-->
+        <!--<pre v-html="userItem" ></pre>-->
+        <!--<div v-html="userItem" ></div>-->
+
+        <!--<div class="row" style="margin:1px; border:3px red dashed; width: 200px;" >-->
+
+            <!--<pre>{{testUserData}}</pre>-->
+
+           <!--<form-input-com-->
+            <!--type="text"-->
+            <!--params="{ col : '4', label : 'name'}"-->
+            <!--:value="testUserData.name"-->
+            <!--name="name"-->
+            <!--@trigger_input="getInputValue"-->
+           <!--&gt;</form-input-com>-->
+
+        <!--</div>-->
+
+
+        <div class="table-responsive mailbox-messages">
+            <table class="table table-hover table-striped cdr-items-table">
+
+                <thead>
+
+                    <tr >
+                        <th v-for="(head, fieldName) in cdrModel" style="vertical-align: top;" >
+                            <div v-if="head" v-html="head" ></div>
+                            <div v-else v-html="fieldName" ></div>
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th v-for="(head, fieldName) in cdrModel" style="padding:2px; margin:2px; vertical-align: top;" >
+                            <template v-if="fieldName in cdrFilters">
+                                <input @input="cdrFiltersInit()" v-model="cdrFilters[fieldName]" type="text"
+                                       class="form-control input-sm" placeholder=""
+                                       style="padding:4px; margin:1px;" >
+                            </template>
+                            <template v-else ><div ></div></template>
+                        </th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr v-for="(item, i) in cdrReports" :key="i + item.uniqueid">
+                        <td v-for="(head, fieldName) in cdrModel" >
+                            <div v-if="item[fieldName]"
+                                 v-html="item[fieldName]" >
+                            </div>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+            <!-- /.table -->
+        </div><!-- /.mail-box-messages -->
+
+    </section>
+
+</div>

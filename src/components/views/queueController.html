@@ -1,0 +1,107 @@
+<div>
+
+    <modal-jquery-com
+            :title="getFormTitleFormatted"
+            :width="widthModalForm"
+            :modal_id="modalId" >
+
+        <!--<div style="display: none;" >{{getItemModel}}</div>-->
+
+        <template slot="form-body">
+
+            <div class="row">
+
+                <template v-if="action == 'add'">
+
+                    <template v-for="(value, fieldName) in item" >
+
+                        <!-- <pre>{{fieldName}} - {{value}}</pre> -->
+
+                        <div v-if="fieldName == 'account'" class="col-xs-4 form-group" >
+                            <label>Номер очереди</label>
+                            <input @input="checkNewQueueAccount(fieldName)" v-model="item[fieldName]"
+                                   type="text" class="form-control" placeholder="Номер группы" >
+                        </div>
+
+                        <div v-else-if="fieldName == 'name'" class="col-xs-8 form-group">
+                            <label>Название очереди</label>
+                            <input v-model="item[fieldName]" type="text" class="form-control" placeholder="Описание">
+                        </div>
+
+                    </template>
+
+                </template>
+                <template v-else-if="action == 'edit'">
+
+                        <div class="col-xs-4 form-group" >
+                            <label>Номер очереди</label>
+                            <input v-model="item['account']" type="text" class="form-control" placeholder="Номер очереди" disabled="true" >
+                        </div>
+                        <div class="col-xs-8 form-group">
+                            <label>Название очереди</label>
+                            <input v-model="item['name']" type="text" class="form-control" placeholder="Название очереди">
+                        </div>
+                        <div class="col-xs-8 form-group" >
+                            <label style="" >Стратегия дозвона</label>
+                            <select v-model="item['strategy']" class="form-control select2" >
+                                <option v-for="option in strategyCalls"
+                                        :value="option.name">{{ option.title }}
+                                </option>
+                            </select>
+                        </div>
+                        <div class="col-xs-4 form-group">
+                            <label style="" >Интервал по умолчанию</label>
+                            <input  v-model="item['timeout']" type="text" class="form-control" >
+                        </div>
+
+                        <!--<div class="col-xs-12 form-group" >-->
+
+                            <!--<div class="row" ><div class="col-md-12"><div class="box box-info">-->
+
+                                <!--<div class="box-header">-->
+                                    <!--<h3 class="box-title">Дополнительные поля-->
+                                        <!--<small></small>-->
+                                    <!--</h3>-->
+                                    <!--&lt;!&ndash; tools box &ndash;&gt;-->
+                                    <!--<div class="pull-right box-tools">-->
+                                        <!--<button type="button" class="btn btn-info btn-sm" data-widget="collapse"-->
+                                                <!--data-toggle="tooltip" title="" data-original-title="Collapse" >-->
+                                            <!--<i class="fa fa-plus" @click="_toggleDisplay('queue-additional-fields')" ></i>-->
+                                        <!--</button>-->
+                                    <!--</div>-->
+                                    <!--&lt;!&ndash; /. tools &ndash;&gt;-->
+                                <!--</div>-->
+                                <!--&lt;!&ndash; /.box-header &ndash;&gt;-->
+                                <!--<div class="box-body pad" id="queue-additional-fields" style="color:black; display:none;">-->
+
+                                    <!--<div class="col-xs-8 form-group" >-->
+                                        <!--<label style="" >Пропускать занятых операторов</label>-->
+                                        <!--<select v-model="item['cwignore']" class="form-control select2" >-->
+                                            <!--<option v-for="option in cwIgnore"-->
+                                                    <!--:value="option.val">{{option.label}}-->
+                                            <!--</option>-->
+                                        <!--</select>-->
+                                    <!--</div>-->
+
+                                <!--</div>-->
+
+                            <!--</div></div></div>-->
+
+                        <!--</div>-->
+
+                </template>
+
+            </div>
+
+        </template>
+
+        <template slot="form-footer" >
+
+            <button  type="button"   class="btn btn-outline pull-left" data-dismiss="modal">Отмена</button>
+            <button  @click="save('queue')" type="button" class="btn btn-outline" data-dismiss="modal" >Сохранить</button>
+
+        </template>
+
+    </modal-jquery-com>
+
+</div><!-- TEMPLATE -->

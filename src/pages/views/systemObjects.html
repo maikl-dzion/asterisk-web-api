@@ -1,0 +1,142 @@
+<div>
+
+    <alert-info-com v-if="alertOpenStatus" :type="saveStatus" :message="alertMessage" ></alert-info-com>
+
+    <!-- HEADER CONTENT -->
+    <section class="content-header">
+        <h1>Настройки системы<small>(core settings)</small></h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-university"></i>Главная</a></li>
+            <li class="active">Настройки системы</li>
+        </ol>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <section class="content">
+
+       <div class="row" >
+
+           <!--<pre>{{trunks}}</pre>-->
+
+           <toggle-box-com title="Внешние номера" note="(trunks)" col_num="12" >
+               <table slot="box-body" class="table table-bordered">
+                   <thead><tr>
+                       <th v-for="(header, fieldName) in trunkFields" v-if="header.label" >
+                           {{header.label}} ({{fieldName}})
+                       </th>
+                       <th >Редак.</th>
+                       <th >Удалить</th>
+                   </tr></thead>
+                   <tbody>
+                       <tr v-for="(row, key) in trunks" :key="row.usercontext" :data-id="row.usercontext" :id="row.usercontext" >
+
+                           <td v-for="(header, fieldName) in trunkFields" v-if="header.label" >
+
+                               <input v-if="header.disabled" v-model="row[fieldName]"
+                                      :placeholder="header.label" disabled="true"
+                                      type="text"  class="form-control number" >
+
+                               <input v-else v-model="row[fieldName]"
+                                      :placeholder="header.label"
+                                      type="text"  class="form-control number" >
+                           </td>
+                           <td>
+                               <button @click="editItem(row, 'trunk')" class="btn btn-block btn-success" style="width:50px" >
+                                   <i class="fa fa-fw fa-save"></i>
+                               </button>
+                           </td>
+                           <td>
+                               <button  @click="deleteItem(row, 'trunk')" style="width:50px" type="button" class="btn btn-danger" >
+                                   <i class="fa fa-fw fa-minus-circle" ></i>
+                               </button>
+                           </td>
+
+                       </tr>
+                   </tbody>
+               </table>
+           </toggle-box-com>
+
+
+           <!--<pre>{{customContexts}}</pre>-->
+           <toggle-box-com title="Пользовательские контексты" note="(custom contexts)" col_num="12" >
+               <table slot="box-body" class="table table-bordered">
+                   <thead><tr>
+                       <th v-for="(header, fieldName) in contextFields" v-if="header.label" >
+                           {{header.label}} ({{fieldName}})
+                       </th>
+                       <th >Редак.</th>
+                       <th >Удалить</th>
+                   </tr></thead>
+                   <tbody>
+                       <tr v-for="(row, key) in customContexts" :key="row.context" :data-id="row.context" :id="row.context" >
+
+                           <td v-for="(header, fieldName) in contextFields" v-if="header.label" >
+
+                               <input v-if="header.disabled" v-model="row[fieldName]"
+                                      :placeholder="header.label" disabled="true"
+                                      type="text"  class="form-control number" >
+
+                               <input v-else v-model="row[fieldName]"
+                                      :placeholder="header.label"
+                                      type="text"  class="form-control number" >
+                           </td>
+                           <td>
+                               <button @click="editItem(row, 'context')" class="btn btn-block btn-success" style="width:50px" >
+                                   <i class="fa fa-fw fa-save"></i>
+                               </button>
+                           </td>
+                           <td>
+                               <button  @click="deleteItem(row, 'context')" style="width:50px" type="button" class="btn btn-danger" >
+                                   <i class="fa fa-fw fa-minus-circle" ></i>
+                               </button>
+                           </td>
+
+                       </tr>
+                   </tbody>
+               </table>
+           </toggle-box-com>
+
+           <!--<pre>{{didRoutes}}</pre>-->
+           <toggle-box-com title="Входящие маршруты" note="(did-routes)" col_num="12" >
+              <template slot="box-body">
+
+                  <core-table-items
+                          :items="didRoutes"
+                          :headers="didRouteFields"
+                          uid_name="extension"
+                          type_name="did-route" >
+                  </core-table-items>
+
+              </template>
+           </toggle-box-com>
+
+           <!--<pre>{{outRoutes}}</pre>-->
+           <toggle-box-com title="Исходящие маршруты" note="(out-routes)" col_num="12" >
+               <template slot="box-body">
+
+                   <core-table-items
+                           :items="outRoutes"
+                           :headers="outRouteFields"
+                           uid_name="route_id"
+                           type_name="out-route" >
+                   </core-table-items>
+
+               </template>
+           </toggle-box-com>
+
+       </div><!---class Row -->
+
+
+        <!--
+        <pre>{{customContexts}}</pre>
+        <pre>{{trunks}}</pre>
+        <pre>{{didRoutes}}</pre>
+        <pre>{{outRoutes}}</pre>
+        <pre>{{ringGroups}}</pre>
+        <pre>{{users}}</pre>
+        <pre>{{devices}}</pre>
+        -->
+
+    </section>
+
+</div><!-- TEMPLATE -->

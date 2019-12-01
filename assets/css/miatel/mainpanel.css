@@ -1,0 +1,503 @@
+#main-page-contactmenu-wrapper {
+    height: 26px;
+    display: block;
+    background: rgba(243,243,243,1);
+    background: -moz-linear-gradient(top, rgba(243,243,243,1) 0%, rgba(222,222,224,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(243,243,243,1)), color-stop(100%, rgba(222,222,224,1)));
+    background: -webkit-linear-gradient(top, rgba(243,243,243,1) 0%, rgba(222,222,224,1) 100%);
+    background: -o-linear-gradient(top, rgba(243,243,243,1) 0%, rgba(222,222,224,1) 100%);
+    background: -ms-linear-gradient(top, rgba(243,243,243,1) 0%, rgba(222,222,224,1) 100%);
+    background: linear-gradient(to bottom, rgba(243,243,243,1) 0%, rgba(222,222,224,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f3f3', endColorstr='#dedee0', GradientType=0 );
+}
+#main-page-contactmenu {
+    width: 1220px;
+    height: 26px;
+    padding: 0;
+    margin: 0 auto;
+}
+#main-page-contactmenu #messages {
+    width: 40px;
+    padding-left: 0px !important;
+}
+#main-page-contactmenu .messages-mail-icon {
+    background: url(/img/mail-icon-sprite.png) center 1px no-repeat;
+    width: 40px;
+    height: 26px;
+    cursor: pointer;
+}
+#main-page-contactmenu .messages-mail-icon.expand {
+    //background-color: white;
+}
+#main-page-contactmenu .messages-mail-icon .messages-total-icon {
+    position: absolute;
+    display: table-cell;
+    line-height: 14px;
+    background-color: white;
+    border-radius: 8px;
+    text-align: center;
+    width: 14px;
+    height: 14px;
+    margin-left: 27px;
+    top: 10px;
+    font-family: 'exo_2.0medium';
+    font-weight: bold;
+    font-size: 7pt;
+    color: black;
+    box-shadow: 0.4px 0.6px 1px #aaaaaa;
+}
+#main-page-contactmenu #main-page-contactmenu-messages {
+    position: absolute;
+    display: table;
+    padding-left: 0;
+    width: 400px;
+    background-color: white;
+    box-shadow: 1px 1px 16px #cccccc;
+    z-index: 25;
+    border-radius: 0 6px 6px 6px;
+    padding: 0 20px;
+}
+#main-page-contactmenu #main-page-contactmenu-messages .title {
+    
+}
+#main-page-contactmenu #main-page-contactmenu-messages.show:before {
+    content: '';
+    position: absolute;
+    top: -25px;
+    width: 40px;
+    height: 25px;
+    background: white url(/img/mail-icon-sprite.png) center 0 no-repeat;
+    border-radius: 6px 6px 0px 0px;
+    left: 0px;
+}
+#main-page-contactmenu #main-page-contactmenu-messages li {
+    display: block;
+    vertical-align: middle;
+    float: none;
+    font-family: 'exo_2.0regular';
+    font-size: 12pt;
+    color: black;
+    line-height: auto;
+    padding-left: 0;    
+}
+#main-page-contactmenu #main-page-contactmenu-messages .column {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#main-page-contactmenu #main-page-contactmenu-messages li span,
+#main-page-contactmenu #main-page-contactmenu-messages li .row,
+#main-page-contactmenu #main-page-contactmenu-messages li form {
+    display: table;
+    vertical-align: middle;
+    border-bottom: solid 1px #e7e8e9;
+    width: 100%;
+    padding: 20px 0;
+}
+#main-page-contactmenu #main-page-contactmenu-messages .message-text {
+    cursor: pointer;
+}
+#main-page-contactmenu #main-page-contactmenu-messages .message-more {
+    width: 19px;    
+}
+#main-page-contactmenu #main-page-contactmenu-messages .message-more i {
+    background-image: url(/img/messages-sign-sprite.png);
+    display: inline-block;
+    width: 19px;
+    height: 14px;
+    cursor: pointer;
+}
+#main-page-contactmenu #main-page-contactmenu-messages .message-more i.read-more-sign {
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+#main-page-contactmenu #main-page-contactmenu-messages .message-status {
+    width: 19px;    
+    padding: 0 15px 0 10px;
+}
+#main-page-contactmenu #main-page-contactmenu-messages .message-status i {
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    background-image: url(/img/messages-status-sprite.png);
+    background-repeat: no-repeat;
+}
+#main-page-contactmenu #main-page-contactmenu-messages .message-status i.crytical {
+    background-position: 0 0;
+}
+#main-page-contactmenu #main-page-contactmenu-messages .message-status i.crytical.checked {
+    background-position: -19px 0;
+}
+#main-page-contactmenu #main-page-contactmenu-messages .message-status i.alert {
+    background-position: -38px 0;
+}
+#main-page-contactmenu #main-page-contactmenu-messages .message-status i.alert.checked {
+    background-position: -57px 0;
+}
+#main-page-contactmenu #main-page-contactmenu-messages .message-status i.info {
+    background-position: -76px 0;
+}
+#main-page-contactmenu #main-page-contactmenu-messages .message-status i.info.checked {
+    background-position: -95px 0;
+}
+#main-page-contactmenu #main-page-contactmenu-messages li .message-text i {
+    font-style: normal;
+    color: #a4a4a4;
+    font-size: 9pt;
+    font-family: 'exo_2.0regular';
+    position: relative;
+    top: -5px;    
+}
+#main-page-contactmenu #main-page-contactmenu-messages li form {
+/*    display: table-cell;    
+    padding: 0 10px 10px 10px;
+    vertical-align: middle;*/
+}
+#main-page-contactmenu #main-page-contactmenu-messages li.title {
+    font-style: normal;
+    font-family: 'exo_2.0regular';
+    font-size: 15pt;    
+    text-align: center;
+    font-weight: bold;
+}
+#main-page-contactmenu li {
+    display: inline-block;
+    line-height: 25px;
+    color: #939598;
+    float: right;
+    padding-left: 20px;
+}
+#main-page-contactmenu li a {
+    color: #ed732d;
+}
+#main-page-contactmenu li a.green {
+    color: #73aa00;
+}
+#main-page-contactmenu li a.manual {
+    color: #939598;
+    text-decoration: none;    
+    /*padding-left: 10px;*/
+}
+#main-page-contactmenu li a i {
+    display: inline-block;
+    position: relative;
+    top: 1px;
+    width: 9px;
+    height: 9px;    
+    margin-right: 2px;
+    background: url(/img/contact-panel-sprite.png) no-repeat;
+}
+#main-page-contactmenu #user-exit i {
+    background-position: 0 0;    
+}
+#main-page-contactmenu #user-manual i {
+    background-position: -9px 0;
+    margin-right: 5px;
+    top: 0px;
+}
+#main-page-contactmenu li a.exit {
+    color: #939598;
+    text-decoration: none;        
+}
+#main-page-topmenu-wrapper {
+    height: 70px;
+    display: block;
+    background: rgba(255,255,255,1);
+    background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(238,238,239,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(100%, rgba(238,238,239,1)));
+    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(238,238,239,1) 100%);
+    background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(238,238,239,1) 100%);
+    background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(238,238,239,1) 100%);
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(238,238,239,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeeef', GradientType=0 );
+}
+#main-page-topmenu {
+    width: 960px;
+    margin: 0 auto;
+    padding: 0;
+    display: table;
+}
+#main-page-topmenu .topmenu-sepatator {
+    height: 40px;
+    margin: 15px 3px;
+    width: 1px;
+    background-color: #eeeeef;
+    border-left: solid 1px white;
+}
+#main-page-topmenu li {
+    display: table-cell;
+    line-height: 70px;
+    color: #534e51;        
+    vertical-align: top;    
+    text-align: center;
+}
+#main-page-topmenu li a {
+    color: #101010;
+    text-decoration: none;
+    font-family: 'exo_2.0medium';
+    font-weight: normal;
+    font-size: 11pt;
+    padding: 0 8px;
+}
+#main-page-topmenu li.select  a {
+    color: #ed732d;
+}
+#main-page-topmenu li.active {
+    background: url(/img/topmenu-background-active.png) bottom left repeat-x;
+}
+#main-page-topmenu li.active a {
+    color: #ed732d;
+}
+#main-page-topmenu .logotip {
+    width: 200px;
+    height: 70px;
+    background: url(/img/logotip.png) center center no-repeat;
+    cursor: pointer;
+}
+#main-page-topmenu .entry a {
+    font-size: 8pt;
+    padding-right: 12px;
+    background: url(/img/entry-icon.png) right center no-repeat;
+}
+#main-page-topmenu li:last-child {
+    
+}
+#main-page-topmenu li ul.phonenumber {
+    display: inline-block;
+    padding: 0;
+    position: relative;
+    /*top: 8px;*/
+    top: 0px;
+    left: -1px;
+}
+#main-page-topmenu li ul.phonenumber li {
+    display: block;
+    line-height: 16px;
+}
+#main-page-bottommenu-wrapper {
+    
+    height: 165px;
+    display: block;  
+    background: rgba(238,239,239,1);
+    background: -moz-linear-gradient(top, rgba(238,239,239,1) 0%, rgba(255,255,255,1) 54%, rgba(255,255,255,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(238,239,239,1)), color-stop(54%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1)));
+    background: -webkit-linear-gradient(top, rgba(238,239,239,1) 0%, rgba(255,255,255,1) 54%, rgba(255,255,255,1) 100%);
+    background: -o-linear-gradient(top, rgba(238,239,239,1) 0%, rgba(255,255,255,1) 54%, rgba(255,255,255,1) 100%);
+    background: -ms-linear-gradient(top, rgba(238,239,239,1) 0%, rgba(255,255,255,1) 54%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(to bottom, rgba(238,239,239,1) 0%, rgba(255,255,255,1) 54%, rgba(255,255,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeefef', endColorstr='#ffffff', GradientType=0 );    
+}
+#main-page-bottommenu {
+    display: none;
+    width: 960px;
+    margin: 0 auto;
+    padding: 0;
+    display: table;    
+}
+#main-page-bottommenu ul.submenu {
+    display: inline-block;
+    vertical-align: top;
+    border-right: solid 1px #e3e3e3;
+    padding: 0 30px 0 40px;
+    margin: 40px 0 20px 0;
+    min-width: 150px;
+}
+#main-page-bottommenu ul.submenu.first {
+    padding-left: 0px;
+}
+#main-page-bottommenu ul.submenu.last {
+    border-right: none;
+}
+#main-page-bottommenu ul.submenu li {
+    line-height: 18pt;
+    list-style-type: disc !important;
+    display: list-item;
+}
+#main-page-bottommenu li {
+    list-style-type: none; 
+    display: inline;
+    vertical-align: top;
+}
+#main-page-bottommenu li a, #main-page-bottommenu li a:active, #main-page-bottommenu li a:visited {
+    color: #534e51;    
+}
+#main-page-bottommenu li a:hover {
+    color: #ed732d;
+}
+#main-page-bottommenu li ul.phonenumber,
+#main-page-bottommenu li ul.social {
+    padding: 0 0 0 36px !important;
+    margin-top: 40px;    
+    display: inline-block;
+}
+#main-page-bottommenu li ul.phonenumber li,
+#main-page-bottommenu li ul.social li {
+    display: block;
+    line-height: 16px;
+}
+#main-page-bottommenu li i.icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;    
+}
+#main-page-bottommenu li i.phone-icon {
+    width: 40px;
+    background: url(/img/icons-common-sprite.png) -180px 0 no-repeat ;
+}
+#main-page-bottommenu li i.email-icon {
+    width: 40px;
+    background: url(/img/icons-common-sprite.png) -210px 0 no-repeat ;
+}
+#main-page-bottommenu li i.vk-icon {
+    background: url(/img/icons-common-sprite.png) 0 0 no-repeat ;
+}
+#main-page-bottommenu li i.facebook-icon {
+    background: url(/img/icons-common-sprite.png) -30px 0 no-repeat ;
+}
+#main-page-bottommenu li i.twitter-icon {
+    background: url(/img/icons-common-sprite.png) -60px 0 no-repeat ;
+}
+#main-page-bottommenu li i.home-icon {
+    background: url(/img/icons-common-sprite.png) -90px 0 no-repeat ;
+}
+#main-page-bottommenu li i.sitemap-icon {
+    background: url(/img/icons-common-sprite.png) -120px 0 no-repeat ;
+}
+#main-page-bottommenu li i.question-icon {
+    background: url(/img/icons-common-sprite.png) -150px 0 no-repeat ;
+}
+#main-page-bottommenu .phonenumber li span {
+    display: inline-block;
+    height: 30px;
+    vertical-align: top;
+}
+#main-page-chat #main-page-chat-welcome {
+    z-index:2;
+    right: -82px;
+    position: fixed;
+    text-align: center;
+    font: normal 12px Arial;
+    cursor: pointer;
+    padding: 0 16px;
+    top: 50%;
+    height: 30px;    
+    line-height: 30px;
+    -webkit-transform: rotate(-90deg);    
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg); 
+    transform: rotate(-90deg);
+    box-shadow: inset 0px 0px 0px 3px rgba(237, 115, 45, 1) !important;
+    background: rgba(244,153,68,1);
+    background: -moz-linear-gradient(left, rgba(244,153,68,1) 0%, rgba(237,115,45,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(244,153,68,1)), color-stop(100%, rgba(237,115,45,1)));
+    background: -webkit-linear-gradient(left, rgba(244,153,68,1) 0%, rgba(237,115,45,1) 100%);
+    background: -o-linear-gradient(left, rgba(244,153,68,1) 0%, rgba(237,115,45,1) 100%);
+    background: -ms-linear-gradient(left, rgba(244,153,68,1) 0%, rgba(237,115,45,1) 100%);
+    background: linear-gradient(to right, rgba(244,153,68,1) 0%, rgba(237,115,45,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f49944', endColorstr='#ed732d', GradientType=1 );
+    color: white;
+    font-size: 10pt;
+    font-family: 'exo_2.0regular';
+}
+#main-page-chat-form {
+    padding: 10px 0 10px 10px;
+}
+#main-page-chat-form .dialog {
+    -webkit-font-smoothing: antialiased;
+    background-origin: padding-box;
+    box-sizing: content-box;
+    max-height: 250px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-size: 10pt;
+    margin-bottom: 5px;
+    min-height: 250px;
+    height: 250px;
+}
+#main-page-chat-form .dialog .message {
+    margin: 0 0 18px 0;
+    height: 18px;
+    word-wrap: break-word;
+    line-height: 18px;
+    vertical-align: top;
+    display: table;        
+    position: relative;    
+}
+#main-page-chat-form .dialog .message-from {
+    right: 10px;  
+}
+#main-page-chat-form .dialog .message-to { 
+    left: 10px;
+}
+#main-page-chat-form .message span, .message .message-date {
+    display: table-cell;
+}
+#main-page-chat-form .dialog .message .message-date {
+    text-align: center;
+    width: 50px;
+    color: #aaaaaa;
+}
+#main-page-chat-form .dialog .message span {
+    padding: 9px 12px;
+    min-width: 120px;
+    text-align: left;
+    max-width: 260px;    
+    border-radius: 8px;
+    font-family: 'exo_2.0regular';
+    font-size: 10pt;
+    font-style: normal;
+}
+#main-page-chat-form .dialog .message-from span {
+    background-color: #f1f2f2;
+}
+#main-page-chat-form .dialog .message-to span {
+    background-color: #f1f2f2;
+}
+#main-page-chat-form .dialog .message-from span:before {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 7px 0px 8px 8px;
+    border-color: transparent #f1f2f2;
+    display: block;
+    width: 0;
+    z-index: 1;
+    top: 28%;
+    right: -7px;
+}
+#main-page-chat-form .dialog .message-to span:before {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 8px 8px 8px 0px;
+    border-color: transparent #f1f2f2;
+    display: block;
+    width: 0;
+    z-index: 1;
+    top: 28%;
+    left: -8px;    
+}
+/*.phonenumber a {
+    font-family: 'Tahoma', Arial !important;
+    font-size: 10pt !important;
+    font-style: normal !important;
+    padding: 0 !important;
+}*/
+.app-version {
+    width: 1000px;
+    margin: 0 auto;
+    color: #cccccc;
+    text-align: left;
+    padding: 10px 0 5px 0;
+}
+#main-page-manual {
+    padding: 0;
+}
+body.kaz #main-page-bottommenu ul.submenu li {
+    list-style-type: none !important;
+}
+body.kaz #main-page-bottommenu ul.submenu {
+    border-right: 0px;
+}

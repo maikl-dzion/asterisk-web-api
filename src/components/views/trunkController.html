@@ -1,0 +1,78 @@
+<div>
+
+    <modal-jquery-com
+            :title="getFormTitleFormatted"
+            :width="widthModalForm"
+            :modal_id="modalId" >
+
+        <template slot="form-body">
+
+            <div class="row">
+
+                <template v-if="action=='edit'" >
+
+                    <template v-for="(value, fieldName) in getItemModel" >
+                        <div v-if="fieldName == 'usercontext'" class="col-xs-4 form-group" >
+                            <label>Номер регистрации (логин)</label>
+                            <input v-model="item[fieldName]" type="text" class="form-control" placeholder="Номер группы" disabled="true" >
+                        </div>
+
+                        <div v-else-if="fieldName == 'trunk_name'" class="col-xs-8 form-group">
+                            <label>Внешний номер (название)</label>
+                            <input v-model="item[fieldName]" type="text" class="form-control" placeholder="Описание">
+                        </div>
+                    </template>
+
+                </template>
+                <template v-else-if="action=='add'" >
+
+                        <div style="display:none" >{{getItemModel}}</div>
+
+                        <div class="col-xs-6 form-group">
+                            <label for="exampleInputTrunkName">Внешний номер (название)</label>
+                            <input @input="checkNewTrunkName('trunk_name')" v-model="item.trunk_name" type="text" class="form-control" id="exampleInputTrunkName" placeholder="Название">
+                        </div>
+
+                        <div class="col-xs-6 form-group">
+                            <label for="exampleInputHost">Host</label>
+                            <input v-model="item.peerdetails.host" type="text" class="form-control" id="exampleInputHost"  placeholder="Пароль">
+                        </div>
+
+                        <div class="col-xs-6 form-group">
+                            <label for="exampleInputLogin">Номер регистрации (логин)</label>
+                            <input  v-model="item.usercontext" type="text" class="form-control" id="exampleInputLogin"  placeholder="Логин">
+                        </div>
+
+                        <div class="col-xs-6 form-group">
+                            <label for="exampleInputPasswd">Пароль</label>
+                            <input v-model="item.peerdetails.secret" type="text" class="form-control" id="exampleInputPasswd"  placeholder="Пароль">
+                        </div>
+
+
+                        <!--<input v-model="item.outcid = item.trunk_name" type="hidden" class="form-control" >-->
+                        <!--<input v-model="item.channelid = item.trunk_name" type="hidden" class="form-control">-->
+                        <!--<input v-model="item.sv_channelid = item.trunk_name" type="hidden"  class="form-control" >-->
+
+                        <!--<input v-model="item.usercontext = item.usercontext" type="hidden"  class="form-control" >-->
+                        <!--<input v-model="item.peerdetails.fromuser = item.usercontext" type="hidden" class="form-control">-->
+                        <!--<input v-model="item.peerdetails.defaultuser = item.usercontext" type="hidden"  class="form-control" >-->
+
+                        <!--&lt;!&ndash;<input v-model="item.userconfig = this.peerdetails" type="hidden"  class="form-control" >&ndash;&gt;-->
+
+                        <!--<input type="hidden" class="form-control"-->
+                               <!--v-model="item.register = item.usercontext + ':' + item.peerdetails.secret + '@' + item.peerdetails.host + '/' + item.usercontext" >-->
+
+                </template>
+
+            </div>
+
+        </template>
+
+        <template slot="form-footer" >
+            <button  type="button"   class="btn btn-outline pull-left" data-dismiss="modal">Отмена</button>
+            <button  @click="save('trunk')" type="button" class="btn btn-outline" data-dismiss="modal" >Сохранить</button>
+        </template>
+
+    </modal-jquery-com>
+
+</div><!-- TEMPLATE -->

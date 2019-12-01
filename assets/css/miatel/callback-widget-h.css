@@ -1,0 +1,1133 @@
+@keyframes widget-short-shadow-blue {
+    0% {
+        box-shadow: 0px 0px 0px -3px rgba(28, 208, 235, 0.7);
+    }
+    50% {
+        box-shadow: 0px 0px 100px -3px rgba(28, 208, 235, 0.9);   
+    }
+    0% {
+        box-shadow: 0px 0px 0px -3px rgba(28, 208, 235, 0.9);
+    }
+}
+@keyframes widget-short-shadow-black {
+    0% {
+        box-shadow: 0px 0px 0px -3px rgba(0, 0, 0, 0.9);
+    }
+    50% {
+        box-shadow: 0px 0px 100px -3px rgba(0, 0, 0, 0.9);   
+    }
+    0% {
+        box-shadow: 0px 0px 0px -3px rgba(0, 0, 0, 0.9);
+    }
+}
+@keyframes widget-short-shadow-orange {
+    0% {
+        box-shadow: 0px 0px 0px -3px rgba(255, 116, 34, 0.9);
+    }
+    50% {
+        box-shadow: 0px 0px 100px -3px rgba(255, 116, 34, 0.9);
+    }
+    0% {
+        box-shadow: 0px 0px 0px -3px rgba(255, 116, 34, 0.9);
+    }
+}
+@keyframes widget-short-shadow-gray {
+    0% {
+        box-shadow: 0px 0px 0px -3px rgba(234, 234, 234, 0.9);
+    }
+    50% {
+        box-shadow: 0px 0px 100px -3px rgba(234, 234, 234, 0.9);
+    }
+    0% {
+        box-shadow: 0px 0px 0px -3px rgba(234, 234, 234, 0.9);
+    }
+}
+@keyframes widget-short-shadow-white {
+    0% {
+        box-shadow: 0px 0px 0px -3px rgba(255, 255, 255, 0.9);
+    }
+    50% {
+        box-shadow: 0px 0px 100px -3px rgba(255, 255, 255, 0.9);
+    }
+    0% {
+        box-shadow: 0px 0px 0px -3px rgba(255, 255, 255, 0.9);
+    }
+}
+@keyframes widget-short-shadow-green {
+    0% {
+        box-shadow: 0px 0px 0px -3px rgba(48, 216, 178, 0.9);
+    }
+    50% {
+        box-shadow: 0px 0px 100px -3px rgba(48, 216, 178, 0.9);
+    }
+    0% {
+        box-shadow: 0px 0px 0px -3px rgba(48, 216, 178, 0.9);
+    }
+}
+@keyframes widget-short-shadow-yellow {
+    0% {
+        box-shadow: 0px 0px 0px -3px rgba(255, 220, 60, 0.9);
+    }
+    50% {
+        box-shadow: 0px 0px 100px -3px rgba(255, 220, 60, 0.9);
+    }
+    0% {
+        box-shadow: 0px 0px 0px -3px rgba(255, 220, 60, 0.9);
+    }
+}
+@keyframes widget-short-shadow-purple {
+    0% {
+        box-shadow: 0px 0px 0px -3px rgba(107, 0, 253, 0.9);
+    }
+    50% {
+        box-shadow: 0px 0px 100px -3px rgba(107, 0, 253, 0.9);
+    }
+    0% {
+        box-shadow: 0px 0px 0px -3px rgba(107, 0, 253, 0.9);
+    }
+}
+@keyframes widget-short-shadow-red {
+    0% {
+        box-shadow: 0px 0px 0px -3px rgba(247, 53, 66, 0.9);
+    }
+    50% {
+        box-shadow: 0px 0px 100px -3px rgba(247, 53, 66, 0.9);
+    }
+    0% {
+        box-shadow: 0px 0px 0px -3px rgba(247, 53, 66, 0.9);
+    }
+}
+@keyframes widget-short-shadow-light-green {
+    0% {
+        box-shadow: 0px 0px 0px -3px rgba(148, 212, 37, 0.9);
+    }
+    50% {
+        box-shadow: 0px 0px 100px -3px rgba(148, 212, 37, 0.9);
+    }
+    0% {
+        box-shadow: 0px 0px 0px -3px rgba(148, 212, 37, 0.9);
+    }
+}
+@keyframes widget-short-shadow-deep-blue {
+    0% {
+        box-shadow: 0px 0px 0px -3px rgba(25, 25, 224, 0.9);
+    }
+    50% {
+        box-shadow: 0px 0px 100px -3px rgba(25, 25, 224, 0.9);
+    }
+    0% {
+        box-shadow: 0px 0px 0px -3px rgba(25, 25, 224, 0.9);
+    }
+}
+@keyframes widget-short-shadow-pink {
+    0% {
+        box-shadow: 0px 0px 0px -3px rgba(255, 93, 139, 0.9);
+    }
+    50% {
+        box-shadow: 0px 0px 100px -3px rgba(255, 93, 139, 0.9);
+    }
+    0% {
+        box-shadow: 0px 0px 0px -3px rgba(255, 93, 139, 0.9);
+    }
+}
+@keyframes widget-short-collapse {
+    0% {
+        transform: rotate(0grad) scale(1, 1);
+    }
+    80% {
+        transform: rotate(180grad) scale(1, 1);
+    }
+    100% {
+        transform: rotate(270grad) scale(0.6, 0.6);
+        box-shadow: none;
+        border: none;
+    }
+}
+@keyframes widget-short-collapse-reverse {
+    0% {
+        transform: rotate(0grad) scale(1, 1);
+    }
+    80% {
+        transform: rotate(-180grad) scale(1, 1);
+    }
+    100% {
+        transform: rotate(-270grad) scale(0.6, 0.6);
+        box-shadow: none;
+        border: none;
+    }
+}
+@keyframes widget-full-expand {
+    0% {
+        width:50px;
+    }
+    90% {
+        width: 497px;
+    }
+    100% {        
+        width: 457px;
+    }
+}
+/*.widgetPanelWrapper {
+    display: none;
+}*/
+.hidden {
+    display: none !important;
+}
+.widgetPanelWrapper.widget-expand,
+.widgetPanelWrapper.widget-collapse {
+    right: 17px !important; 
+}
+/*.widgetPanel {
+    width: 48px;
+}*/
+.widgetPanel .widgetCloseBtn {
+    display: none;
+}
+.widget-expand-finish .widgetCloseBtn {
+    display: inline-block;
+}
+.widgetPanel .widgetText {
+    display: none;
+}
+.widgetPanelWrapper.down-left.widget-expand-finish .widgetPanel .widgetText {
+    left: 18px;    
+    right: auto;
+}
+.widgetPanelWrapper.up-left.widget-expand-finish .widgetPanel .widgetText {
+    left: 18px;    
+    right: auto;
+}
+.widgetPanelWrapper.widget-expand-finish .widgetPanel .widgetText {
+    display: table-cell;
+    position: absolute;
+    right: 310px;
+    top: 10px;
+}
+.widgetPanel {
+    box-sizing: content-box;
+}
+.widgetPanel .widgetPhonePrefix {
+    box-sizing: content-box;
+/*    padding-left: 3px;*/
+    max-width: 40px;
+    text-align: right;
+    display: inline-block;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 14px;
+    color: #989898;
+    line-height: 34px;
+}
+.widgetPanel .widgetPhoneBlockWrapper {
+    display: none;
+}
+.widgetPanelWrapper.down-left.widget-expand-finish .widgetPanel .widgetPhoneBlockWrapper {
+    left: 145px;
+    right: auto;
+}
+.widgetPanelWrapper.widget-expand-finish .widgetPanel .widgetPhoneBlockWrapper {
+    display: table-cell;
+    position: absolute;
+    right: 90px;
+    top: 10px;
+}
+.widgetPanel .widgetOwnerAdvWrapper {
+    display: none;
+}
+.widget-expand-finish .widgetOwnerAdvWrapper {
+    display: block;
+}
+.widgetPanelWrapper.widget-collapse-finish {
+    right: -99999px !important;
+}
+.widgetPanel .widgetSubmitBtnWrapper span {
+    display: none;
+}
+.widget-expand-finish .widgetSubmitBtnWrapper span {
+    display: block;
+}
+.widgetPanel .widgetSubmitBtnWrapper i {
+    display: none;
+}
+.widget-expand-finish .widgetSubmitBtnWrapper i {
+    display: inline-block;
+}
+.widgetPanel .widgetSubmitBtn {
+    width: 34px;
+    transition: width 0.2s cubic-bezier(0, -0.1, 0, 0);
+}
+.widgetPanelWrapper.down-left .widgetPanel .widgetSubmitBtnWrapper {
+    
+}
+.widgetPanel .widgetSubmitBtnWrapper {
+    position: absolute;
+    top: 10px !important; 
+    right: 10px !important;
+    line-height: normal !important;
+}
+.widget-expand .widgetSubmitBtn {
+    /*transition: all 0.2s linear;*/
+    display: block;
+    width: 125px;
+}
+.widgetPanelWrapper .widgetPanel {
+    width: 48px;
+}
+
+.widget-expand .widgetPanel {
+    transition: width 0.4s cubic-bezier(0.25, 0.1, 0.35, 1.5);
+    width: 457px;
+    height: 48px;
+}
+.widget-collapse .widgetPanel {
+    transition: width 0.4s cubic-bezier(0, -0.1, 0, 0);
+    width: 48px;
+    height: 48px;
+}
+.widgetPanelWrapper {
+    right: -99999px;
+}
+.widgetPanelWrapper.down-right {
+    bottom: 30px;
+}
+.widgetPanelWrapper.up-right {
+    top: 30px;
+}
+.widgetPanelWrapper.down-left {
+    bottom: 30px;
+    left: 15px;
+    right: auto !important;
+}
+.widgetPanelWrapper.up-left {
+    top: 30px;
+    left: 15px;
+    right: auto !important;    
+}
+.widgetButtonWrapper.down-right {
+    bottom:28px; 
+    right: 15px;    
+}
+.widgetButtonWrapper.down-left {
+    bottom:28px; 
+    left: 15px;    
+}
+.widgetButtonWrapper.up-left {
+    top: 28px;
+    left: 15px;
+}
+.widgetButtonWrapper.up-right {
+    top: 28px;
+    right: 15px;
+}
+
+.widgetButtonWrapper.widget-expand {
+    animation: widget-short-collapse 0.2s linear 0s reverse !important; 
+}
+.widgetButtonWrapper.widget-collapse {
+    animation: widget-short-collapse 0.2s linear 0s !important; 
+}
+.widgetButtonWrapper.widget-collapse .widgetButton {
+/*    border:none;*/
+}
+.widgetButtonWrapper.annimation-white {
+    animation: widget-short-shadow-white 6s ease-in-out 0s normal none infinite running; 
+}
+.widgetButtonWrapper.annimation-white {
+    animation: widget-short-shadow-white 6s ease-in-out 0s normal none infinite running; 
+}
+.widgetButtonWrapper.annimation-black {
+    animation: widget-short-shadow-black 6s ease-in-out 0s normal none infinite running; 
+}
+.widgetButtonWrapper.annimation-gray {
+    animation: widget-short-shadow-gray 6s ease-in-out 0s normal none infinite running; 
+}
+.widgetButtonWrapper.annimation-orange {
+    animation: widget-short-shadow-orange 6s ease-in-out 0s normal none infinite running; 
+}
+.widgetButtonWrapper.annimation-blue {
+    animation: widget-short-shadow-blue 6s ease-in-out 0s normal none infinite running; 
+}
+.widgetButtonWrapper.annimation-blue {
+    animation: widget-short-shadow-blue 6s ease-in-out 0s normal none infinite running; 
+}
+.widgetButtonWrapper.annimation-green {
+    animation: widget-short-shadow-green 6s ease-in-out 0s normal none infinite running; 
+}
+.widgetButtonWrapper.annimation-yellow {
+    animation: widget-short-shadow-yellow 6s ease-in-out 0s normal none infinite running; 
+}
+.widgetButtonWrapper.annimation-purple {
+    animation: widget-short-shadow-purple 6s ease-in-out 0s normal none infinite running; 
+}
+.widgetButtonWrapper.annimation-red {
+    animation: widget-short-shadow-red 6s ease-in-out 0s normal none infinite running; 
+}
+.widgetButtonWrapper.annimation-light-green {
+    animation: widget-short-shadow-light-green 6s ease-in-out 0s normal none infinite running; 
+}
+.widgetButtonWrapper.annimation-deep-blue {
+    animation: widget-short-shadow-deep-blue 6s ease-in-out 0s normal none infinite running; 
+}
+.widgetButtonWrapper.annimation-pink {
+    animation: widget-short-shadow-pink 6s ease-in-out 0s normal none infinite running; 
+}
+/*
+.widgetButtonWrapper.icon-white,
+.widgetButtonWrapper.icon-black,
+.widgetButtonWrapper.icon-blue,
+.widgetButtonWrapper.icon-orange,
+.widgetButtonWrapper.icon-gray,
+.widgetButtonWrapper.icon-green,
+.widgetButtonWrapper.icon-yellow,
+.widgetButtonWrapper.icon-purple,
+.widgetButtonWrapper.icon-red,
+.widgetButtonWrapper.icon-light-green,
+.widgetButtonWrapper.icon-deep-blue,
+.widgetButtonWrapper.icon-pink {
+    animation: widget-short-shadow-white 6s ease-in-out 0s normal none infinite running; 
+}
+*/
+.widgetPanel {
+    height: 48px;
+    border-radius: 42px;    
+    border-width: 2px;
+}
+.widgetPanel.shadow {
+    box-shadow: 3px 3px 3px rgba(200,200,200,0.8);    
+}
+.widgetPanel .widgetText {
+    width: 127px;
+    height: 32px;
+    max-height: 32px;
+    vertical-align: middle;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 14px;       
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    line-height: normal;
+    box-sizing: content-box;
+}
+.widgetPanel.bg-green .widgetText {
+/*    color: white;*/
+}
+.widgetPanel .widgetPhoneBlockWrapper {
+/*    display: table-cell;*/
+    vertical-align: middle;
+/*    height: 50px;*/
+}
+.widgetPanelWrapper.down-left .widgetPanel .widgetPhoneBlockWrapper .widgetPhoneBlock {
+    
+}
+.widgetPanel .widgetPhoneBlockWrapper .widgetPhoneBlock {
+    height: 34px;
+    width: 220px;    
+    background-color: #f7f7f7;    
+    border-radius: 16px 0 0 16px;
+}
+.widgetPanel .widgetPhoneNumWrapper input {
+    padding: 0;
+    line-height: normal;
+    border: none;
+    width: 104px;
+    background-color: transparent;    
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 14px;    
+    color: #989898;
+    box-shadow: none;
+}
+.widgetPanel .widgetPhoneNumWrapper input:focus {
+    box-shadow: none;
+}
+.widgetPanel .widgetPhoneNumWrapper.not-valid .widgetPhonePrefix {
+    color: red;
+}
+.widgetPanel .widgetPhoneNumWrapper.not-valid .widgetPhoneNum {
+    color: red;
+}
+.widgetPanel .widgetPhoneNumWrapper input:focus {
+    outline: none;
+}
+.widgetPanel .widgetPhoneCountry {
+    box-sizing: content-box;
+    display: inline-block;
+    width: 36px;
+    height: 23px;
+    border: solid 1px #5d5d5d;
+    border-radius: 16px;
+    margin: 4px 0 0 6px;
+    cursor: pointer;
+}
+.widgetPanelWrapper.down-left .widgetPanel .widgetPhoneCountryWrapper {
+
+}
+.widgetPanel .widgetPhoneCountryWrapper {
+    display: table-cell;
+    height: 34px;
+    vertical-align: middle;
+    box-sizing: content-box;
+    line-height: normal;
+}
+.widgetPanelWrapper.down-left .widgetPanel .widgetPhoneNumWrapper { 
+    left: 55px;
+}
+.widgetPanel .widgetPhoneNumWrapper {
+    display: table-cell;
+    position: absolute;
+    left: 50px;
+    top: 0px;
+    height: 34px;
+    vertical-align: middle;
+}
+.widgetPanel .widgetPhoneNum {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    top: -1px;    
+    left: -4px;
+}
+.widgetPanel .widgetSubmitBtnWrapper {
+    height: 34px;
+}
+.widgetPanel .widgetSubmitBtn {
+    height: 34px;
+    text-align: center;
+    border-radius: 432px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 0px 0px;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: Tahoma, Geneva, sans-serif !important;
+    margin: 0;
+    vertical-align: baseline !important;
+    background-image: none !important;
+    line-height: 34px;
+}
+.widgetPanel .widgetSubmitBtn i {
+    background-image: url(/img/callback-phone-sprite.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    cursor: pointer;
+    transform: rotate(250deg) scale(0.5, 0.5);
+    width: 34px;
+    height: 34px;
+    top: 0px;
+    right: 0px;
+    position: absolute;
+}
+.widgetButton.bg-green:hover {
+    background-color: #34bf9e;
+}
+.widgetButton.bg-blue:hover {
+    background-color: #29b9cf;
+}
+.widgetButton.bg-orange:hover {
+    background-color: #e6692b;
+}
+.widgetButton.bg-gray:hover {
+    background-color:  #d2d2d2;
+}
+.widgetButton.bg-black:hover {
+    background-color:  #4c4c4c;
+}
+.widgetButton.bg-white:hover {
+    background-color:  #4c4c4c;
+}
+.widgetButton.bg-yellow:hover {
+    background-color:  #f2d037;
+}
+.widgetButton.bg-purple:hover {
+    background-color: #6000e3;
+}
+.widgetButton.bg-red:hover {
+    background-color: #e9303c;
+}
+.widgetButton.bg-light-green:hover {
+    background-color: #87c221;
+}
+.widgetButton.bg-deep-blue:hover {
+    background-color: #1313bc;
+}
+.widgetButton.bg-pink:hover {
+    background-color: #e7527c;
+}
+.widgetPanelWrapper .bg-white,
+.widgetButtonWrapper .bg-white,
+.widgetExample .bg-white {
+    background-color: white;
+}
+.widgetPanelWrapper .bg-black,
+.widgetButtonWrapper .bg-black,
+.widgetExample .bg-black {
+    background-color: black;
+}
+.widgetPanelWrapper .bg-gray,
+.widgetButtonWrapper .bg-gray,
+.widgetExample .bg-gray {
+    background-color: #eaeaea;
+}
+.widgetPanelWrapper .bg-orange,
+.widgetButtonWrapper .bg-orange,
+.widgetExample .bg-orange {
+    background-color: #ff7422;
+}
+.widgetPanelWrapper .bg-blue,
+.widgetButtonWrapper .bg-blue,
+.widgetExample .bg-blue {
+    background-color: #1cd0eb;
+}
+.widgetPanelWrapper .bg-green,
+.widgetButtonWrapper .bg-green,
+.widgetExample .bg-green {
+    background-color: #30d8b2;
+}
+.widgetPanelWrapper .bg-yellow,
+.widgetButtonWrapper .bg-yellow,
+.widgetExample .bg-yellow {
+    background-color: #ffdc3c;
+}
+.widgetPanelWrapper .bg-purple,
+.widgetButtonWrapper .bg-purple,
+.widgetExample .bg-purple {
+    background-color: #6b00fd;
+}
+.widgetPanelWrapper .bg-red,
+.widgetButtonWrapper .bg-red,
+.widgetExample .bg-red {
+    background-color: #f73542;
+}
+.widgetPanelWrapper .bg-light-green,
+.widgetButtonWrapper .bg-light-green,
+.widgetExample .bg-light-green {
+    background-color: #94d425;
+}
+.widgetPanelWrapper .bg-deep-blue,
+.widgetButtonWrapper .bg-deep-blue,
+.widgetExample .bg-deep-blue {
+    background-color: #1919e0;
+}
+.widgetPanelWrapper .bg-pink,
+.widgetButtonWrapper .bg-pink,
+.widgetExample .bg-pink {
+    background-color: #ff5d8b;
+}
+.widgetPanelWrapper .txt-black,
+.widgetButtonWrapper .txt-black,
+.widgetExample .txt-black {
+    color: black;
+}
+.widgetPanelWrapper .txt-white,
+.widgetButtonWrapper .txt-white,
+.widgetExample .txt-white {
+    color: white;
+}
+.widgetPanelWrapper .txt-gray,
+.widgetButtonWrapper .txt-gray,
+.widgetExample .txt-gray { 
+    color: #eaeaea;
+}
+.widgetPanelWrapper .txt-blue,
+.widgetButtonWrapper .txt-blue,
+.widgetExample .txt-blue {
+    color: #1cd0eb;
+}
+.widgetPanelWrapper .txt-orange,
+.widgetButtonWrapper .txt-orange,
+.widgetExample .txt-orange {
+    color: #ff7422;
+}
+.widgetPanelWrapper .txt-green,
+.widgetButtonWrapper .txt-green,
+.widgetExample .txt-green {
+    color: #30d8b2;
+}
+.widgetPanelWrapper .txt-yellow,
+.widgetButtonWrapper .txt-yellow,
+.widgetExample .txt-yellow {
+    color: #ffdc3c;
+}
+.widgetPanelWrapper .txt-purple,
+.widgetButtonWrapper .txt-purple,
+.widgetExample .txt-purple {
+    color: #6b00fd;
+}
+.widgetPanelWrapper .txt-red,
+.widgetButtonWrapper .txt-red,
+.widgetExample .txt-red {
+    color: #f73542;
+}
+.widgetPanelWrapper .txt-light-green,
+.widgetButtonWrapper .txt-light-green,
+.widgetExample .txt-light-green {
+    color: #94d425;
+}
+.widgetPanelWrapper .txt-deep-blue,
+.widgetButtonWrapper .txt-deep-blue,
+.widgetExample .txt-deep-blue {
+    color: #1919e0;
+}
+.widgetPanelWrapper .txt-pink,
+.widgetButtonWrapper .txt-pink,
+.widgetExample .txt-pink {
+    color: #ff5d8b;
+}
+.widgetPanelWrapper .border-black,
+.widgetButtonWrapper .border-black,
+.widgetExample .border-black {
+    border: solid black;
+}
+.widgetPanelWrapper .border-white,
+.widgetButtonWrapper .border-white,
+.widgetExample .border-white {
+    border: solid white;
+}
+.widgetPanelWrapper .border-gray,
+.widgetButtonWrapper .border-gray,
+.widgetExample .border-gray {
+    border: solid #eaeaea;
+}
+.widgetPanelWrapper .border-orange,
+.widgetButtonWrapper .border-orange,
+.widgetExample .border-orange {
+    border: solid #ff7422;
+}
+.widgetPanelWrapper .border-blue,
+.widgetButtonWrapper .border-blue,
+.widgetExample .border-blue {
+    border: solid #1cd0eb;
+}
+.widgetPanelWrapper .border-green ,
+.widgetButtonWrapper .border-green ,
+.widgetExample .border-green { 
+    border: solid #30d8b2;
+}
+.widgetPanelWrapper .border-yellow ,
+.widgetButtonWrapper .border-yellow ,
+.widgetExample .border-yellow { 
+    border: solid #ffdc3c;
+}
+.widgetPanelWrapper .border-purple ,
+.widgetButtonWrapper .border-purple ,
+.widgetExample .border-purple { 
+    border: solid #6b00fd;
+}
+.widgetPanelWrapper .border-red ,
+.widgetButtonWrapper .border-red ,
+.widgetExample .border-red { 
+    border: solid #f73542;
+}
+.widgetPanelWrapper .border-light-green,
+.widgetButtonWrapper .border-light-green ,
+.widgetExample .border-light-green { 
+    border: solid #94d425;
+}
+.widgetPanelWrapper .border-deep-blue,
+.widgetButtonWrapper .border-deep-blue ,
+.widgetExample .border-deep-blue { 
+    border: solid #1919e0;
+}
+.widgetPanelWrapper .border-pink,
+.widgetButtonWrapper .border-pink ,
+.widgetExample .border-pink { 
+    border: solid #ff5d8b;
+}
+.widgetPanelWrapper .with-shadow,
+.widgetButtonWrapper .with-shadow,
+.widgetExample .with-shadow {
+    box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.7);
+}
+.widgetPanelWrapper .gradient-yellow-blue,
+.widgetButtonWrapper .gradient-yellow-blue,
+.widgetExample .gradient-yellow-blue {
+    background: #f9ffd1; /* Old browsers */
+    background: -moz-linear-gradient(left,  #f9ffd1 0%, #a4ffce 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  #f9ffd1 0%,#a4ffce 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  #f9ffd1 0%,#a4ffce 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9ffd1', endColorstr='#a4ffce',GradientType=1 ); /* IE6-9 */    
+}
+.widgetPanelWrapper .gradient-white-gray,
+.widgetButtonWrapper .gradient-white-gray,
+.widgetExample .gradient-white-gray {
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(left,  #ffffff 0%, #dbdbda 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  #ffffff 0%,#dbdbda 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  #ffffff 0%,#dbdbda 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dbdbda',GradientType=1 ); /* IE6-9 */    
+}
+.widgetPanelWrapper .gradient-dark-orange-orange,
+.widgetButtonWrapper .gradient-dark-orange-orange,
+.widgetExample .gradient-dark-orange-orange {    
+    background: #ff9900; /* Old browsers */
+    background: -moz-linear-gradient(left,  #ff9900 0%, #ffb65d 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  #ff9900 0%,#ffb65d 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  #ff9900 0%,#ffb65d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff9900', endColorstr='#ffb65d',GradientType=1 ); /* IE6-9 */    
+}
+.widgetPanelWrapper .gradient-blue-dark-blue,
+.widgetButtonWrapper .gradient-blue-dark-blue,
+.widgetExample .gradient-blue-dark-blue {
+    background: #00d2ff;
+    background: -moz-linear-gradient(left,  #00d2ff 0%, #397cd5 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  #00d2ff 0%,#397cd5 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  #00d2ff 0%,#397cd5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00d2ff', endColorstr='#397cd5',GradientType=1 ); /* IE6-9 */    
+}
+.widgetPanelWrapper .gradient-green-blue,
+.widgetButtonWrapper .gradient-green-blue,
+.widgetExample .gradient-green-blue {
+    background: #92fe9d; /* Old browsers */
+    background: -moz-linear-gradient(left,  #92fe9d 0%, #03cafd 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  #92fe9d 0%,#03cafd 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  #92fe9d 0%,#03cafd 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#92fe9d', endColorstr='#03cafd',GradientType=1 ); /* IE6-9 */
+}
+.widgetPanel .widgetCloseBtn {
+    width: 12px;
+    height: 12px;
+    background-color: transparent !important;
+    background-image: url(/img/callback-close-sprite.png);
+    background-repeat: no-repeat;
+    cursor: pointer;
+    position: absolute;
+    right: -4px;
+    top: -5px;
+}
+.widgetPanel .widgetCloseBtn.bg-white {
+    background-position: 0 0;
+}
+.widgetPanel .widgetCloseBtn.bg-black {
+    background-position: -13px 0;
+}
+.widgetPanel .widgetCloseBtn.bg-gray {
+    background-position: -25px 0;
+}
+.widgetPanel .widgetCloseBtn.bg-orange {
+    background-position: -38px 0;
+}
+.widgetPanel .widgetCloseBtn.bg-blue {
+    background-position: -52px 0;
+}
+.widgetPanel .widgetCloseBtn.bg-green {
+    background-position: -65px 0;
+}
+.widgetPanel .widgetCloseBtn.bg-yellow {
+    background-position: -13px 0;
+}
+.widgetPanel .widgetCloseBtn.bg-purple {
+    background-position: -13px 0;
+}
+.widgetPanel .widgetCloseBtn.bg-red {
+    background-position: -13px 0;
+}
+.widgetPanel .widgetCloseBtn.bg-light-green {
+    background-position: -13px 0;
+}
+.widgetPanel .widgetCloseBtn.bg-deep-blue {
+    background-position: -13px 0;
+}
+.widgetPanel .widgetCloseBtn.bg-pink {
+    background-position: -13px 0;
+}
+.widgetPanelWrapper.down-left .widgetPanel .widgetOwnerAdvWrapper {    
+    left: 224px;
+}
+.widgetPanelWrapper.down-left .widgetPanel .widgetOwnerAdvWrapper .widgetOwnerAdv { 
+    left: 0;
+}
+.widgetPanelWrapper.up-left .widgetPanel .widgetOwnerAdvWrapper {    
+    left: 224px;
+}
+.widgetPanelWrapper.up-left .widgetPanel .widgetOwnerAdvWrapper .widgetOwnerAdv { 
+    left: 0;
+}
+.widgetPanel .widgetOwnerAdvWrapper {
+    width: 174px;
+    height: 23px;
+    position: absolute;
+    bottom: -20px;
+    right: -10px;
+}
+.widgetPanel .widgetOwnerAdvWrapper .widgetOwnerAdv {
+    background-color: #f7f7f7;
+    margin-right: 10px;
+    border-radius: 0 0 10px 10px;
+    font-size: 10px;
+    font-family: Tahoma, Geneva, sans-serif;
+    color: black;
+    word-wrap: break-word;
+    white-space: nowrap;
+    width: 175px;
+    height: 18px;
+    line-height: 17px;
+    text-align: center;
+    position: relative;
+    left: -52px;
+    top: 4px;
+}
+.widgetPanel .widgetOwnerAdvWrapper .widgetOwnerAdv a {
+    font-size: 10px;
+}
+.widgetPanel.with-shadow .widgetOwnerAdvWrapper .widgetOwnerAdv {
+    box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.7);
+}
+.widgetPanel .widgetPhoneCountry i {
+    box-sizing: content-box;
+    cursor: pointer;
+    position: absolute;
+    transform: translate(24px, 8px);
+    width: 6px;
+    height: 6px;
+    background: url(/img/callback-country-arrow.png);    
+}
+.widgetPanel .widgetPhoneCountryFlag {
+    box-sizing: content-box;
+    cursor: pointer;
+    position: absolute;
+    transform: translate(6px, 4px);
+    width: 16px;
+    height: 11px;
+    top: 7px;
+    background: url(/img/callback-country-flag.png);
+}
+.widgetPanel .widgetPhoneCountryFlag.rus {
+    background-position: 0 0;
+}
+.widgetPanel .widgetPhoneCountryFlag.kaz {
+    background-position: -16px 0;
+}
+.widgetPanel .widgetPhoneCountryFlag.ukr {
+    background-position: -32px 0;
+}
+.widgetPanel .widgetPhoneCountryFlag.bel {
+    background-position: -48px 0;
+}
+.widgetPanel .widgetCountrySelector {
+    position: absolute;
+    display: inline-block;
+    border-radius: 12px;
+    background: #f7f7f7;    
+    width: 120px;
+    z-index: 1;
+    transform: translate(0px, -33px);
+    box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.7);
+    top: -10px;
+}
+.widgetPanel .widgetCountrySelector.hidden {
+    display: none;
+}
+.widgetPanel .widgetCountrySelector .widgetCountryItem {
+    cursor: pointer;
+    line-height: 28px;
+    font-size: 12px;
+    padding-left: 10px;
+    font-family: Tahoma, Geneva, sans-serif;    
+}
+.widgetPanel .widgetCountrySelector .widgetCountryItem:first-child:hover {
+    border-radius: 12px 12px 0 0;
+}
+.widgetPanel .widgetCountrySelector .widgetCountryItem:hover {
+    background-color: #e7e7e7;
+}
+.widgetPanel .widgetCountrySelector .widgetCountryItem:last-child:hover {
+    border-radius: 0  0 12px 12px;
+}
+.widgetPanel .widgetCountrySelector .widgetCountryItem i {
+    display: inline-block;
+    width: 16px;
+    height: 11px;
+    background: url(/img/callback-country-flag.png) no-repeat;
+}
+.widgetPanel .widgetCountrySelector .widgetCountryItem.rus i {
+    background-position: 0 0;    
+}
+.widgetPanel .widgetCountrySelector .widgetCountryItem.kaz i {
+    background-position: -16px 0;    
+}
+.widgetPanel .widgetCountrySelector .widgetCountryItem.ukr i {
+    background-position: -32px 0;    
+}
+.widgetPanel .widgetCountrySelector .widgetCountryItem.bel i {
+    background-position: -48px 0;    
+}
+.widgetButton {
+    width: auto !important;
+    height: auto !important;
+    display: table-cell !important;
+    vertical-align: middle !important;
+    text-align: center !important;
+    border-radius: 50px !important;
+    border-width: 2px !important;
+    /*background-image: none !important;*/
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.widgetButton .widgetButtonInner {
+    width: 46px;
+    height: 46px;    
+    border-radius: 50px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;    
+    position: relative;
+    left: 2px;
+}
+.widgetButton.size-small {
+    border-radius: 50px !important;
+    width: 50px  !important;
+    height: 50px  !important;
+    font-size: 10pt !important;
+}
+.widgetButtonWrapper {
+    width: auto !important;
+    height: auto !important;
+}
+.widgetButtonWrapper.size-small {
+    border-radius: 50px;
+}
+.widgetButton.size-middle{
+    border-radius: 62px !important;
+    width: 62px !important;
+    height: 62px !important;
+}
+.widgetButtonWrapper.size-middle {
+    border-radius: 62px !important;
+}
+.widgetButton.size-big {
+    border-radius: 68px !important;
+    width: 68px !important;
+    height: 68px !important;
+}
+.widgetButtonWrapper.size-big {
+    border-radius: 68px !important;
+}
+.widgetExample .widgetButton {
+/*    position: relative;
+    left: -5px;        */
+}
+.widgetButton i {
+    display: inline-block;
+    background-image: url(/img/callback-phone-sprite.png);
+    background-repeat: no-repeat;
+    width: 34px;
+    height: 34px;
+    position: relative;
+    top: 2px;        
+}
+.widgetPanelWrapper .callback-icon-white i,
+.widgetButtonWrapper .callback-icon-white i,
+.widgetExample .callback-icon-white i {
+    background-position: 1px center;
+}
+.widgetPanelWrapper .callback-icon-black i,
+.widgetButtonWrapper .callback-icon-black i,
+.widgetExample .callback-icon-black i {
+    background-position: -34px center;
+}
+.widgetPanelWrapper .callback-icon-orange i,
+.widgetButtonWrapper .callback-icon-orange i,
+.widgetExample .callback-icon-orange i {
+    background-position: -69px center;
+}
+.widgetPanelWrapper .callback-icon-blue i,
+.widgetButtonWrapper .callback-icon-blue i,
+.widgetExample .callback-icon-blue i {
+    background-position: -103px center;
+}
+.widgetPanelWrapper .callback-icon-green i,
+.widgetButtonWrapper .callback-icon-green i,
+.widgetExample .callback-icon-green i {
+    background-position: -138px center;
+}
+.widgetPanelWrapper .callback-icon-yellow i,
+.widgetButtonWrapper .callback-icon-yellow i,
+.widgetExample .callback-icon-yellow i {
+    background-position: -208px center;
+}
+.widgetPanelWrapper .callback-icon-purple i,
+.widgetButtonWrapper .callback-icon-purple i,
+.widgetExample .callback-icon-purple i {
+    background-position: -244px center;
+}
+.widgetPanelWrapper .callback-icon-red i,
+.widgetButtonWrapper .callback-icon-red i,
+.widgetExample .callback-icon-red i {
+    background-position: -280px center; //36
+}
+.widgetPanelWrapper .callback-icon-light-green i,
+.widgetButtonWrapper .callback-icon-light-green i,
+.widgetExample .callback-icon-light-green i {
+    background-position: -315px center; //36
+}
+.widgetPanelWrapper .callback-icon-deep-blue i,
+.widgetButtonWrapper .callback-icon-deep-blue i,
+.widgetExample .callback-icon-deep-blue i {
+    background-position: -350px center; //36
+}
+.widgetPanelWrapper .callback-icon-pink i,
+.widgetButtonWrapper .callback-icon-pink i,
+.widgetExample .callback-icon-pink i {
+    background-position: -385px center; //36
+}
+.widgetPanelWrapper .callback-icon-gray i,
+.widgetButtonWrapper .callback-icon-gray i,
+.widgetExample .callback-icon-gray i {
+    background-position: -174px center;
+}
+.widgetPanelWrapper .widgetButton.size-small i,
+.widgetButtonWrapper .widgetButton.size-small i,
+.widgetExample .widgetButton.size-small i {
+    transform: scale(0.75, 0.75);
+}
+.widgetPanelWrapper .widgetButton.size-middle i,
+.widgetButtonWrapper .widgetButton.size-middle i,
+.widgetExample .widgetButton.size-middle i {
+    transform: scale(0.85, 0.85);
+}
+.widgetPanelWrapper .widgetButton.size-big i,
+.widgetButtonWrapper .widgetButton.size-big i,
+.widgetExample .widgetButton.size-big i {
+    transform: scale(1, 1);
+}
+.widgetPanelWrapper .opacity-20,
+.widgetExample .opacity-20 {
+    opacity: .80;    
+}
+.widgetPanelWrapper .opacity-40,
+.widgetExample .opacity-40 {
+    opacity: .60;
+}
+.widgetPanelWrapper .opacity-60,
+.widgetExample .opacity-60 {
+    opacity: .40;
+}
+.widgetPanelWrapper .opacity-80,
+.widgetExample .opacity-80 {
+    opacity: .20;
+}
+.widgetPanelWrapper .widgetButton.callback-icon-white .widgetButtonTimer,
+.widgetExample .widgetButton.callback-icon-white .widgetButtonTimer {
+    color: white;
+}
+.widgetPanelWrapper .widgetButton.callback-icon-green .widgetButtonTimer,
+.widgetExample .widgetButton.callback-icon-green .widgetButtonTimer {
+    color: #30d8b2;
+}
+.widgetPanelWrapper .widgetButton.callback-icon-black .widgetButtonTimer,
+.widgetExample .widgetButton.callback-icon-black .widgetButtonTimer {
+    color: black;
+}
+.widgetPanelWrapper .widgetButton.callback-icon-blue .widgetButtonTimer,
+.widgetExample .widgetButton.callback-icon-blue .widgetButtonTimer {
+    color: #1cd0eb;
+}
+.widgetPanelWrapper .widgetButton.callback-icon-orange .widgetButtonTimer,
+.widgetExample .widgetButton.callback-icon-orange .widgetButtonTimer {
+    color: #ff7422;
+}
+.widgetPanelWrapper .widgetButton.callback-icon-orange .widgetButtonTimer,
+.widgetExample .widgetButton.callback-icon-orange .widgetButtonTimer {
+    color: #eaeaea;
+}
+.widgetPanelWrapper.hidden,
+.widgetButtonWrapper.hidden,
+.widgetExample .hidden {
+    display: none;
+}
